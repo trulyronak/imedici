@@ -7,5 +7,5 @@ Links provided <a href = "https://google.com">here</a>
 Westview High School
 
 ##Team
-###Ronak Shah
-###Robby Zaheer
+ - ###Ronak Shah
+ - ###Robby Zaheer
