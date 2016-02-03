@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A6426A5A1C619C7E00B002E7 /* ContentTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6426A591C619C7E00B002E7 /* ContentTableViewCell.swift */; };
+		A6426A5C1C619C9D00B002E7 /* DecisionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6426A5B1C619C9D00B002E7 /* DecisionTableViewCell.swift */; };
 		A6655C761C6003AE0009D8FF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6655C751C6003AE0009D8FF /* AppDelegate.swift */; };
 		A6655C781C6003AE0009D8FF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6655C771C6003AE0009D8FF /* ViewController.swift */; };
 		A6655C7B1C6003AE0009D8FF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A6655C791C6003AE0009D8FF /* Main.storyboard */; };
@@ -34,6 +36,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		A6426A591C619C7E00B002E7 /* ContentTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContentTableViewCell.swift; sourceTree = "<group>"; };
+		A6426A5B1C619C9D00B002E7 /* DecisionTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DecisionTableViewCell.swift; sourceTree = "<group>"; };
 		A6655C721C6003AE0009D8FF /* iMedici.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iMedici.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A6655C751C6003AE0009D8FF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A6655C771C6003AE0009D8FF /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -74,6 +78,31 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		A6426A561C619C5300B002E7 /* Code */ = {
+			isa = PBXGroup;
+			children = (
+				A6426A571C619C5700B002E7 /* UI */,
+			);
+			name = Code;
+			sourceTree = "<group>";
+		};
+		A6426A571C619C5700B002E7 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				A6426A581C619C5A00B002E7 /* TableViewCells */,
+			);
+			name = UI;
+			sourceTree = "<group>";
+		};
+		A6426A581C619C5A00B002E7 /* TableViewCells */ = {
+			isa = PBXGroup;
+			children = (
+				A6426A591C619C7E00B002E7 /* ContentTableViewCell.swift */,
+				A6426A5B1C619C9D00B002E7 /* DecisionTableViewCell.swift */,
+			);
+			name = TableViewCells;
+			sourceTree = "<group>";
+		};
 		A6655C691C6003AE0009D8FF = {
 			isa = PBXGroup;
 			children = (
@@ -97,6 +126,7 @@
 		A6655C741C6003AE0009D8FF /* iMedici */ = {
 			isa = PBXGroup;
 			children = (
+				A6426A561C619C5300B002E7 /* Code */,
 				A6655C751C6003AE0009D8FF /* AppDelegate.swift */,
 				A6655C771C6003AE0009D8FF /* ViewController.swift */,
 				A6655C791C6003AE0009D8FF /* Main.storyboard */,
@@ -258,6 +288,8 @@
 			files = (
 				A6655C781C6003AE0009D8FF /* ViewController.swift in Sources */,
 				A6655C761C6003AE0009D8FF /* AppDelegate.swift in Sources */,
+				A6426A5A1C619C7E00B002E7 /* ContentTableViewCell.swift in Sources */,
+				A6426A5C1C619C9D00B002E7 /* DecisionTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -482,6 +514,7 @@
 				A6655C9C1C6003AE0009D8FF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		A6655C9D1C6003AE0009D8FF /* Build configuration list for PBXNativeTarget "iMediciTests" */ = {
 			isa = XCConfigurationList;
@@ -490,6 +523,7 @@
 				A6655C9F1C6003AE0009D8FF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		A6655CA01C6003AE0009D8FF /* Build configuration list for PBXNativeTarget "iMediciUITests" */ = {
 			isa = XCConfigurationList;
@@ -498,6 +532,7 @@
 				A6655CA21C6003AE0009D8FF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
