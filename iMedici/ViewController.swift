@@ -28,7 +28,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     }
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 2
+        return 4
     }
     
     
@@ -37,11 +37,13 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         let cell: UITableViewCell!
         if currentRow == 0 {
             cell = tableView.dequeueReusableCellWithIdentifier("contentCell")
+            tableView.rowHeight = 70
             currentRow++
         }
         
         else {
             cell = tableView.dequeueReusableCellWithIdentifier("decisionCell")
+            tableView.rowHeight = 347
             currentRow = 0
         }
         cell.selectionStyle = UITableViewCellSelectionStyle.None
