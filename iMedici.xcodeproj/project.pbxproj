@@ -16,6 +16,7 @@
 		A6655C801C6003AE0009D8FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A6655C7E1C6003AE0009D8FF /* LaunchScreen.storyboard */; };
 		A6655C8B1C6003AE0009D8FF /* iMediciTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6655C8A1C6003AE0009D8FF /* iMediciTests.swift */; };
 		A6655C961C6003AE0009D8FF /* iMediciUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6655C951C6003AE0009D8FF /* iMediciUITests.swift */; };
+		A6D95BAD1C63F81200885725 /* Template.txt in Resources */ = {isa = PBXBuildFile; fileRef = A6D95BAC1C63F81200885725 /* Template.txt */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +52,7 @@
 		A6655C911C6003AE0009D8FF /* iMediciUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = iMediciUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A6655C951C6003AE0009D8FF /* iMediciUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iMediciUITests.swift; sourceTree = "<group>"; };
 		A6655C971C6003AE0009D8FF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A6D95BAC1C63F81200885725 /* Template.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Template.txt; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -126,6 +128,7 @@
 		A6655C741C6003AE0009D8FF /* iMedici */ = {
 			isa = PBXGroup;
 			children = (
+				A6D95BAB1C63F80400885725 /* Story */,
 				A6426A561C619C5300B002E7 /* Code */,
 				A6655C751C6003AE0009D8FF /* AppDelegate.swift */,
 				A6655C771C6003AE0009D8FF /* ViewController.swift */,
@@ -153,6 +156,14 @@
 				A6655C971C6003AE0009D8FF /* Info.plist */,
 			);
 			path = iMediciUITests;
+			sourceTree = "<group>";
+		};
+		A6D95BAB1C63F80400885725 /* Story */ = {
+			isa = PBXGroup;
+			children = (
+				A6D95BAC1C63F81200885725 /* Template.txt */,
+			);
+			name = Story;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -261,6 +272,7 @@
 			files = (
 				A6655C801C6003AE0009D8FF /* LaunchScreen.storyboard in Resources */,
 				A6655C7D1C6003AE0009D8FF /* Assets.xcassets in Resources */,
+				A6D95BAD1C63F81200885725 /* Template.txt in Resources */,
 				A6655C7B1C6003AE0009D8FF /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
