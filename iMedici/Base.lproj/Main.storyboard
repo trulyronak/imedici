@@ -135,7 +135,8 @@
                                                             <exclude reference="YTV-En-7no"/>
                                                         </mask>
                                                     </variation>
-                                                    <variation key="widthClass=compact">
+                                                    <variation key="widthClass=compact" misplaced="YES">
+                                                        <rect key="frame" x="38" y="8" width="163" height="37"/>
                                                         <mask key="constraints">
                                                             <include reference="YTV-En-7no"/>
                                                         </mask>
@@ -155,7 +156,8 @@
                                                             <exclude reference="jqw-Pb-wM2"/>
                                                         </mask>
                                                     </variation>
-                                                    <variation key="widthClass=compact">
+                                                    <variation key="widthClass=compact" misplaced="YES">
+                                                        <rect key="frame" x="38" y="53" width="78" height="78"/>
                                                         <mask key="constraints">
                                                             <include reference="jqw-Pb-wM2"/>
                                                         </mask>
@@ -175,7 +177,8 @@
                                                             <exclude reference="kbG-PL-YpT"/>
                                                         </mask>
                                                     </variation>
-                                                    <variation key="widthClass=compact">
+                                                    <variation key="widthClass=compact" misplaced="YES">
+                                                        <rect key="frame" x="124" y="53" width="77" height="78"/>
                                                         <mask key="constraints">
                                                             <include reference="kbG-PL-YpT"/>
                                                         </mask>
@@ -196,7 +199,8 @@
                                                             <exclude reference="Fxa-7q-NEn"/>
                                                         </mask>
                                                     </variation>
-                                                    <variation key="widthClass=compact">
+                                                    <variation key="widthClass=compact" misplaced="YES">
+                                                        <rect key="frame" x="38" y="139" width="230" height="54"/>
                                                         <mask key="constraints">
                                                             <include reference="Fxa-7q-NEn"/>
                                                         </mask>

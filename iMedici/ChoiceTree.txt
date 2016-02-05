@@ -1,0 +1,12 @@
+#Comments
+#I tabbed comments so its easier to see, not required
+
+    #declare starting choice
+start = NAME
+
+
+    #declare a choice like so
+choice NAME
+    #keep name in all caps
+right OTHER_NAME
+    #Type "right" or "left" to declare a path going in that way

@@ -23,3 +23,16 @@ panel2
 fkjdslfjdsklfjlksdjf klsdjklfsdjlkfjsd lkf
 
 
+decision A
+A left AB
+A right BA
+
+decision AD
+right CD
+left
+
+
+A
+content
+dsfdsfjldslkfjsd
+

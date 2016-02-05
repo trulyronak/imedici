@@ -16,6 +16,10 @@
 		A6655C801C6003AE0009D8FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A6655C7E1C6003AE0009D8FF /* LaunchScreen.storyboard */; };
 		A6655C8B1C6003AE0009D8FF /* iMediciTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6655C8A1C6003AE0009D8FF /* iMediciTests.swift */; };
 		A6655C961C6003AE0009D8FF /* iMediciUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6655C951C6003AE0009D8FF /* iMediciUITests.swift */; };
+		A694D3E71C6548A800DC91A8 /* ChoiceTree.txt in Resources */ = {isa = PBXBuildFile; fileRef = A694D3E61C6548A800DC91A8 /* ChoiceTree.txt */; };
+		A694D3E91C65498600DC91A8 /* ChoiceContent.txt in Resources */ = {isa = PBXBuildFile; fileRef = A694D3E81C65498600DC91A8 /* ChoiceContent.txt */; };
+		A694D3EC1C654AEC00DC91A8 /* Choice.swift in Sources */ = {isa = PBXBuildFile; fileRef = A694D3EB1C654AEC00DC91A8 /* Choice.swift */; };
+		A694D3EE1C654C4800DC91A8 /* Decision.swift in Sources */ = {isa = PBXBuildFile; fileRef = A694D3ED1C654C4800DC91A8 /* Decision.swift */; };
 		A6D95BAD1C63F81200885725 /* Template.txt in Resources */ = {isa = PBXBuildFile; fileRef = A6D95BAC1C63F81200885725 /* Template.txt */; };
 /* End PBXBuildFile section */
 
@@ -52,6 +56,10 @@
 		A6655C911C6003AE0009D8FF /* iMediciUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = iMediciUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A6655C951C6003AE0009D8FF /* iMediciUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iMediciUITests.swift; sourceTree = "<group>"; };
 		A6655C971C6003AE0009D8FF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A694D3E61C6548A800DC91A8 /* ChoiceTree.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = ChoiceTree.txt; sourceTree = "<group>"; };
+		A694D3E81C65498600DC91A8 /* ChoiceContent.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = ChoiceContent.txt; sourceTree = "<group>"; };
+		A694D3EB1C654AEC00DC91A8 /* Choice.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Choice.swift; sourceTree = "<group>"; };
+		A694D3ED1C654C4800DC91A8 /* Decision.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Decision.swift; sourceTree = "<group>"; };
 		A6D95BAC1C63F81200885725 /* Template.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Template.txt; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -83,6 +91,7 @@
 		A6426A561C619C5300B002E7 /* Code */ = {
 			isa = PBXGroup;
 			children = (
+				A6D95BAF1C63FCD600885725 /* Logic */,
 				A6426A571C619C5700B002E7 /* UI */,
 			);
 			name = Code;
@@ -91,6 +100,8 @@
 		A6426A571C619C5700B002E7 /* UI */ = {
 			isa = PBXGroup;
 			children = (
+				A6D95BB11C63FD4C00885725 /* Storyboards */,
+				A6D95BAE1C63FCC900885725 /* ViewControllers */,
 				A6426A581C619C5A00B002E7 /* TableViewCells */,
 			);
 			name = UI;
@@ -130,11 +141,7 @@
 			children = (
 				A6D95BAB1C63F80400885725 /* Story */,
 				A6426A561C619C5300B002E7 /* Code */,
-				A6655C751C6003AE0009D8FF /* AppDelegate.swift */,
-				A6655C771C6003AE0009D8FF /* ViewController.swift */,
-				A6655C791C6003AE0009D8FF /* Main.storyboard */,
 				A6655C7C1C6003AE0009D8FF /* Assets.xcassets */,
-				A6655C7E1C6003AE0009D8FF /* LaunchScreen.storyboard */,
 				A6655C811C6003AE0009D8FF /* Info.plist */,
 			);
 			path = iMedici;
@@ -158,12 +165,49 @@
 			path = iMediciUITests;
 			sourceTree = "<group>";
 		};
+		A694D3EA1C654AE300DC91A8 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				A694D3EB1C654AEC00DC91A8 /* Choice.swift */,
+				A694D3ED1C654C4800DC91A8 /* Decision.swift */,
+			);
+			name = Core;
+			sourceTree = "<group>";
+		};
 		A6D95BAB1C63F80400885725 /* Story */ = {
 			isa = PBXGroup;
 			children = (
 				A6D95BAC1C63F81200885725 /* Template.txt */,
+				A694D3E61C6548A800DC91A8 /* ChoiceTree.txt */,
+				A694D3E81C65498600DC91A8 /* ChoiceContent.txt */,
 			);
 			name = Story;
+			sourceTree = "<group>";
+		};
+		A6D95BAE1C63FCC900885725 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				A6655C771C6003AE0009D8FF /* ViewController.swift */,
+			);
+			name = ViewControllers;
+			sourceTree = "<group>";
+		};
+		A6D95BAF1C63FCD600885725 /* Logic */ = {
+			isa = PBXGroup;
+			children = (
+				A694D3EA1C654AE300DC91A8 /* Core */,
+				A6655C751C6003AE0009D8FF /* AppDelegate.swift */,
+			);
+			name = Logic;
+			sourceTree = "<group>";
+		};
+		A6D95BB11C63FD4C00885725 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				A6655C791C6003AE0009D8FF /* Main.storyboard */,
+				A6655C7E1C6003AE0009D8FF /* LaunchScreen.storyboard */,
+			);
+			name = Storyboards;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -272,7 +316,9 @@
 			files = (
 				A6655C801C6003AE0009D8FF /* LaunchScreen.storyboard in Resources */,
 				A6655C7D1C6003AE0009D8FF /* Assets.xcassets in Resources */,
+				A694D3E91C65498600DC91A8 /* ChoiceContent.txt in Resources */,
 				A6D95BAD1C63F81200885725 /* Template.txt in Resources */,
+				A694D3E71C6548A800DC91A8 /* ChoiceTree.txt in Resources */,
 				A6655C7B1C6003AE0009D8FF /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -299,9 +345,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				A6655C781C6003AE0009D8FF /* ViewController.swift in Sources */,
+				A694D3EC1C654AEC00DC91A8 /* Choice.swift in Sources */,
 				A6655C761C6003AE0009D8FF /* AppDelegate.swift in Sources */,
 				A6426A5A1C619C7E00B002E7 /* ContentTableViewCell.swift in Sources */,
 				A6426A5C1C619C9D00B002E7 /* DecisionTableViewCell.swift in Sources */,
+				A694D3EE1C654C4800DC91A8 /* Decision.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

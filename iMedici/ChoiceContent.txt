@@ -1,0 +1,44 @@
+    #type "choice NAME:" to start specifying content
+    #example
+
+choice START
+
+content
+#All of your content stuff goes here. To go to a next line, type \n and this will be on the next line
+
+
+decision
+
+prompt
+All the stuff in the prompt
+
+leftPanel
+
+picture
+SOURCE TO PICTURE
+
+text
+the persons name and stuff
+
+bulletPoints
+- point one
+- point two
+- point three
+
+cost
+1000
+
+rightPanel
+
+allowMoney (true/false)
+money earned 200
+
+#You can still do the same things for left panel
+
+
+
+panel1
+jfkldsjfk dsjkfdsjlkfds ljfklsdj fkls
+
+panel2
+fkjdslfjdsklfjlksdjf klsdjklfsdjlkfjsd lkf
