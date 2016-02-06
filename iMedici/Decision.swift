@@ -9,20 +9,30 @@
 import UIKit
 
 class Decision: NSObject, NSCoding{
-    var prompt: String
+    var prompt: String!
     
     //left panel
-    var leftImage: UIImage
-    var leftText: String
-    var leftBulletPoints: [String]
+    var leftImage: UIImage!
+    var leftText: String!
+    var leftBulletPoints: [String]!
     
     //right panel
-    var rightImage: UIImage
-    var rightText: String
-    var rightBulletPoints: [String]
+    var rightImage: UIImage!
+    var rightText: String!
+    var rightBulletPoints: [String]!
     
     override init() {
+        //left
+        leftImage = nil
+        leftText = nil
+        leftBulletPoints = nil
+        //right
+        rightImage = nil
+        rightText = nil
+        rightBulletPoints = nil
         
+        //general
+        prompt = nil
     }
     
     //data management protocols

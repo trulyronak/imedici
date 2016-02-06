@@ -20,7 +20,6 @@
 		A694D3E91C65498600DC91A8 /* ChoiceContent.txt in Resources */ = {isa = PBXBuildFile; fileRef = A694D3E81C65498600DC91A8 /* ChoiceContent.txt */; };
 		A694D3EC1C654AEC00DC91A8 /* Choice.swift in Sources */ = {isa = PBXBuildFile; fileRef = A694D3EB1C654AEC00DC91A8 /* Choice.swift */; };
 		A694D3EE1C654C4800DC91A8 /* Decision.swift in Sources */ = {isa = PBXBuildFile; fileRef = A694D3ED1C654C4800DC91A8 /* Decision.swift */; };
-		A6D95BAD1C63F81200885725 /* Template.txt in Resources */ = {isa = PBXBuildFile; fileRef = A6D95BAC1C63F81200885725 /* Template.txt */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -60,7 +59,6 @@
 		A694D3E81C65498600DC91A8 /* ChoiceContent.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = ChoiceContent.txt; sourceTree = "<group>"; };
 		A694D3EB1C654AEC00DC91A8 /* Choice.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Choice.swift; sourceTree = "<group>"; };
 		A694D3ED1C654C4800DC91A8 /* Decision.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Decision.swift; sourceTree = "<group>"; };
-		A6D95BAC1C63F81200885725 /* Template.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Template.txt; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -177,7 +175,6 @@
 		A6D95BAB1C63F80400885725 /* Story */ = {
 			isa = PBXGroup;
 			children = (
-				A6D95BAC1C63F81200885725 /* Template.txt */,
 				A694D3E61C6548A800DC91A8 /* ChoiceTree.txt */,
 				A694D3E81C65498600DC91A8 /* ChoiceContent.txt */,
 			);
@@ -317,7 +314,6 @@
 				A6655C801C6003AE0009D8FF /* LaunchScreen.storyboard in Resources */,
 				A6655C7D1C6003AE0009D8FF /* Assets.xcassets in Resources */,
 				A694D3E91C65498600DC91A8 /* ChoiceContent.txt in Resources */,
-				A6D95BAD1C63F81200885725 /* Template.txt in Resources */,
 				A694D3E71C6548A800DC91A8 /* ChoiceTree.txt in Resources */,
 				A6655C7B1C6003AE0009D8FF /* Main.storyboard in Resources */,
 			);
