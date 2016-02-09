@@ -28,4 +28,66 @@ choice INTRO
 right AA
 left BA
 
-choice 
+choice AA
+right AB
+left BB
+
+choice BA
+right AB
+left BB
+
+choice AB
+right AC
+left ABA
+
+choice BB
+right BBA
+left BC
+
+choice AC
+right none
+left AD
+
+choice ABA
+right AD
+left ABB
+
+choice BC
+right BCA
+left BD
+
+choice BBA
+right BBB
+left BCA
+
+choice AD
+right AE
+left ADA
+
+choice AE
+right none
+left AF
+
+choice AF
+right AG
+left AFA
+
+choice AG
+right AH
+left AGA
+
+choice AH
+right none
+left EVENT_1
+
+choice AGA
+left none
+right EVENT_1
+
+choice AFA
+right none
+left AFB
+
+choice AFB
+right EVENT_1
+left EVENT_1
