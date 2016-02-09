@@ -11,3 +11,21 @@ choice NAME
 right OTHER_NAME
     #Type "right" or "left" to declare a path going in that way
 #end
+
+
+
+
+
+
+
+
+#start
+
+
+start INTRO
+
+choice INTRO
+right AA
+left BA
+
+choice 
