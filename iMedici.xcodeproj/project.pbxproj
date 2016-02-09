@@ -23,6 +23,7 @@
 		A694D3EC1C654AEC00DC91A8 /* Choice.swift in Sources */ = {isa = PBXBuildFile; fileRef = A694D3EB1C654AEC00DC91A8 /* Choice.swift */; };
 		A694D3EE1C654C4800DC91A8 /* Decision.swift in Sources */ = {isa = PBXBuildFile; fileRef = A694D3ED1C654C4800DC91A8 /* Decision.swift */; };
 		A6BFBD611C6A83EF00590E9A /* StreamReader.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6BFBD601C6A83EF00590E9A /* StreamReader.swift */; };
+		A6BFBD631C6A8F3A00590E9A /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6BFBD621C6A8F3A00590E9A /* Extensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -65,6 +66,7 @@
 		A694D3EB1C654AEC00DC91A8 /* Choice.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Choice.swift; sourceTree = "<group>"; };
 		A694D3ED1C654C4800DC91A8 /* Decision.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Decision.swift; sourceTree = "<group>"; };
 		A6BFBD601C6A83EF00590E9A /* StreamReader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StreamReader.swift; sourceTree = "<group>"; };
+		A6BFBD621C6A8F3A00590E9A /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -184,6 +186,7 @@
 			isa = PBXGroup;
 			children = (
 				A6BFBD601C6A83EF00590E9A /* StreamReader.swift */,
+				A6BFBD621C6A8F3A00590E9A /* Extensions.swift */,
 			);
 			name = FileIO;
 			sourceTree = "<group>";
@@ -362,6 +365,7 @@
 				A694D3EC1C654AEC00DC91A8 /* Choice.swift in Sources */,
 				A6BFBD611C6A83EF00590E9A /* StreamReader.swift in Sources */,
 				A6655C761C6003AE0009D8FF /* AppDelegate.swift in Sources */,
+				A6BFBD631C6A8F3A00590E9A /* Extensions.swift in Sources */,
 				A6235F231C65D13000C2E5E0 /* StoryHandler.swift in Sources */,
 				A6426A5A1C619C7E00B002E7 /* ContentTableViewCell.swift in Sources */,
 				A6426A5C1C619C9D00B002E7 /* DecisionTableViewCell.swift in Sources */,

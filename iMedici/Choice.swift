@@ -11,8 +11,14 @@ import Foundation
 class Choice: NSObject, NSCoding {
     var isActive:Bool
     var decision: Decision!
+    var identifier: String
     
-    override init() {
+    //tree
+    var left: Choice?
+    var right: Choice?
+    
+    init(identity: String) {
+        self.identifier = identity
         isActive = false
         decision = nil
     }
@@ -21,13 +27,13 @@ class Choice: NSObject, NSCoding {
     func encodeWithCoder(coder: NSCoder) {
         coder.encodeObject(isActive, forKey: "isActive")
         coder.encodeObject(decision, forKey: "decision")
-
+        coder.encodeObject(identifier, forKey: "identifier")
     }
     
     required init(coder: NSCoder) {
         self.isActive = coder.decodeObjectForKey("isActive") as! Bool
         self.decision = coder.decodeObjectForKey("decision") as! Decision
-        super.init()
+        self.identifier = coder.decodeObjectForKey("identifier") as! String
     }
 
     
