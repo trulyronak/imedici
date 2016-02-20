@@ -12,20 +12,8 @@ extension String {
     
     ///Returns the "index" number in the string (Counts like 0,1,2,3)
     func wordAtIndex(index: Int) -> String? {
-        let word = self
-        var finalWord = ""
-        var wordNumber = 0
-        
-        for character in word.characters {
-            if character == " "{
-                if wordNumber == index {
-                    return word
-                }
-                wordNumber++
-            }
-            else {
-                finalWord.append(character)
-            }
-        }
+        var words = self.componentsSeparatedByString(" ")
+        return words[index]
     }
+    
 }

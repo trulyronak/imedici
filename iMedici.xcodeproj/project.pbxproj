@@ -22,6 +22,7 @@
 		A694D3E91C65498600DC91A8 /* ChoiceContent.txt in Resources */ = {isa = PBXBuildFile; fileRef = A694D3E81C65498600DC91A8 /* ChoiceContent.txt */; };
 		A694D3EC1C654AEC00DC91A8 /* Choice.swift in Sources */ = {isa = PBXBuildFile; fileRef = A694D3EB1C654AEC00DC91A8 /* Choice.swift */; };
 		A694D3EE1C654C4800DC91A8 /* Decision.swift in Sources */ = {isa = PBXBuildFile; fileRef = A694D3ED1C654C4800DC91A8 /* Decision.swift */; };
+		A6959EDF1C6D374300284EB0 /* Content.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6959EDE1C6D374300284EB0 /* Content.swift */; };
 		A6BFBD611C6A83EF00590E9A /* StreamReader.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6BFBD601C6A83EF00590E9A /* StreamReader.swift */; };
 		A6BFBD631C6A8F3A00590E9A /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6BFBD621C6A8F3A00590E9A /* Extensions.swift */; };
 /* End PBXBuildFile section */
@@ -65,6 +66,7 @@
 		A694D3E81C65498600DC91A8 /* ChoiceContent.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = ChoiceContent.txt; sourceTree = "<group>"; };
 		A694D3EB1C654AEC00DC91A8 /* Choice.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Choice.swift; sourceTree = "<group>"; };
 		A694D3ED1C654C4800DC91A8 /* Decision.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Decision.swift; sourceTree = "<group>"; };
+		A6959EDE1C6D374300284EB0 /* Content.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Content.swift; sourceTree = "<group>"; };
 		A6BFBD601C6A83EF00590E9A /* StreamReader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StreamReader.swift; sourceTree = "<group>"; };
 		A6BFBD621C6A8F3A00590E9A /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -178,6 +180,7 @@
 				A694D3ED1C654C4800DC91A8 /* Decision.swift */,
 				A6235F201C65D12200C2E5E0 /* Reader.swift */,
 				A6235F221C65D13000C2E5E0 /* StoryHandler.swift */,
+				A6959EDE1C6D374300284EB0 /* Content.swift */,
 			);
 			name = Core;
 			sourceTree = "<group>";
@@ -363,6 +366,7 @@
 				A6235F211C65D12200C2E5E0 /* Reader.swift in Sources */,
 				A6655C781C6003AE0009D8FF /* ViewController.swift in Sources */,
 				A694D3EC1C654AEC00DC91A8 /* Choice.swift in Sources */,
+				A6959EDF1C6D374300284EB0 /* Content.swift in Sources */,
 				A6BFBD611C6A83EF00590E9A /* StreamReader.swift in Sources */,
 				A6655C761C6003AE0009D8FF /* AppDelegate.swift in Sources */,
 				A6BFBD631C6A8F3A00590E9A /* Extensions.swift in Sources */,

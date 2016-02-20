@@ -6,7 +6,7 @@
 //  Copyright © 2016 Shah Industries. All rights reserved.
 //
 
-import Foundation
+import UIKit
 
 class Reader {
     func readData() {
@@ -14,7 +14,7 @@ class Reader {
         
         if let reader = StreamReader(path: file) {
             var startChoice: String!
-            var choices = [Choice]()
+            var choices = [String:Choice]()
             var currentChoice: Choice!
             
             while let line = reader.nextLine() {
@@ -33,7 +33,7 @@ class Reader {
                         let nextWord = line.wordAtIndex(1)
                         var newChoice = Choice(identity: nextWord!)
                         currentChoice = newChoice
-                        choices.append(newChoice)
+                        choices.updateValue(newChoice, forKey: nextWord!)
                         break
                         
                     case "r":
@@ -66,21 +66,147 @@ class Reader {
             if let reader = StreamReader(path: file) {
                 var currentChoice: Choice!
                 
+                
+                //bools
+                var choiceTrue = false
+                var decisionTrue = false
+                var contentTrue = false
+                
+                //decision bools
+                var promptTrue = false
+                var leftPanelTrue = false
+                var rightPanelTrue = false
+                var pictureTrue = false
+                var textTrue = false
+                var costTrue = false
+                var allowMoneyTrue = false
+                var moneyEarnedTrue = false
+                var bulletPointsTrue = false
+                
+                func negateAllDecision() {
+                    promptTrue = false
+                    
+                    pictureTrue = false
+                    textTrue = false
+                    costTrue = false
+                    allowMoneyTrue = false
+                    moneyEarnedTrue = false
+                    bulletPointsTrue = false
+                }
+                var decision = Decision()
                 while let line = reader.nextLine() {
-                    if line.wordAtIndex(0) == "choice" {
+                    if line.wordAtIndex(0) == "#" {
+                        //do nothing, its just a comment
+                    }
+                        
+                    else if line.wordAtIndex(0) == "choice" {
+                        //choice
+                        currentChoice = choices[line.wordAtIndex(1)!]
+                        choiceTrue = true
+                    }
+                        
+                    else {
+                        if line.wordAtIndex(0) == "content" {
+                            contentTrue = true
+                            choiceTrue = false
+                            decisionTrue = false
+                        }
+                        else if line.wordAtIndex(0) == "decision" {
+                            decisionTrue = true
+                            contentTrue = false
+                            choiceTrue = false
+                        }
+                            
+                        else if contentTrue {
+                            var text = line
+                            var newContent = Content(text: text)
+                        }
+                        else if decisionTrue {
+                            if line.wordAtIndex(0) == "prompt"{
+                                negateAllDecision()
+                                promptTrue = true
+                            }
+                            else if line.wordAtIndex(0) == "leftPanel" || line.wordAtIndex(0) == "panel1"{
+                                negateAllDecision()
+                                leftPanelTrue = true
+                            }
+                            else if line.wordAtIndex(0) == "picture" {
+                                negateAllDecision()
+                                pictureTrue = true
+                            }
+                            else if line.wordAtIndex(0) == "text" {
+                                
+                                negateAllDecision()
+                                textTrue = true
+                            }
+                            else if line.wordAtIndex(0) == "bulletPoints" {
+                                negateAllDecision()
+                                bulletPointsTrue = true
+                                decisionTrue = false // to avoid too long loading
+                            }
+                            else if line.wordAtIndex(0) == "cost" {
+                                negateAllDecision()
+                                costTrue = true
+                            }
+                            else if line.wordAtIndex(0) == "rightPanel" || line.wordAtIndex(0) == "panel2" {
+                                negateAllDecision()
+                                rightPanelTrue = true
+                                leftPanelTrue = false
+                            }
+                            else if line.wordAtIndex(0) == "allowMoney" {
+                                negateAllDecision()
+                                allowMoneyTrue = true
+                            }
+                                
+                                //now for the actual content part
+                            else if promptTrue {
+                                decision.prompt = line
+                            }
+                            else if leftPanelTrue && textTrue {
+                                decision.leftText = line
+                            }
+                            else if rightPanelTrue && textTrue {
+                                decision.rightText = line
+                            }
+                            else if pictureTrue {
+                                if rightPanelTrue {
+                                    decision.rightImage = UIImage(named: line)
+                                }
+                                else if leftPanelTrue {
+                                    decision.leftImage = UIImage(named: line)
+                                }
+                            }
+                            else if costTrue {
+                                decision
+                            }
+                        }
+                        else if bulletPointsTrue {
+                            if line.wordAtIndex(0) == "-" && leftPanelTrue {
+                                var bullet = line.substringWithRange(Range<String.Index>(start: line.startIndex.advancedBy(1), end: line.endIndex)) //"llo, playgroun"
+                                decision.leftBulletPoints.append(bullet)
+                            }
+                            else if line.wordAtIndex(0) == "-" && rightPanelTrue {
+                                var bullet = line.substringWithRange(Range<String.Index>(start: line.startIndex.advancedBy(1), end: line.endIndex)) //"llo, playgroun"
+                                decision.rightBulletPoints.append(bullet)
+                            }
+                            else if line.wordAtIndex(0) == "done" {
+                                decisionTrue = true
+                            }
+                        }
                         
                     }
                 }
                 defer {
                     reader.close()
                 }
-
-            
+                
+                
+            }
+            else {
+                //file not found
+                
+            }
         }
-        else {
-            //file not found
-            
-        }
+        //end of function
     }
-    //end of function
 }

@@ -24,13 +24,16 @@ bulletPoints
 - point one
 - point two
 - point three
+done
 
 cost
 1000
 
 rightPanel
 
-allowMoney (true/false)
+allowMoney
+(true/false)
+
 money earned 200
 
 #You can still do the same things for left panel

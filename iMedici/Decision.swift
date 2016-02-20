@@ -15,24 +15,32 @@ class Decision: NSObject, NSCoding{
     var leftImage: UIImage!
     var leftText: String!
     var leftBulletPoints: [String]!
+    var cost: Double!
     
     //right panel
     var rightImage: UIImage!
     var rightText: String!
     var rightBulletPoints: [String]!
+    var moneyEarned: Double!
+    var allowMoney: Bool!
     
     override init() {
         //left
         leftImage = nil
         leftText = nil
         leftBulletPoints = nil
+        cost = nil
         //right
         rightImage = nil
         rightText = nil
         rightBulletPoints = nil
+        moneyEarned = nil
+        allowMoney = nil
         
         //general
         prompt = nil
+        
+        
     }
     
     //data management protocols
