@@ -31,7 +31,7 @@ cost
 rightPanel
 
 allowMoney (true/false)
-money earned 200
+money 200
 
 #You can still do the same things for left panel
 
