@@ -177,7 +177,18 @@ class Reader {
                                 }
                             }
                             else if costTrue {
-                                decision
+                                decision.cost = Double(line)
+                            }
+                            else if allowMoneyTrue {
+                                if line == "true" {
+                                    decision.allowMoney = true
+                                }
+                                else {
+                                    decision.allowMoney = false
+                                }
+                            }
+                            else if moneyEarnedTrue {
+                                decision.moneyEarned = Double(line)
                             }
                         }
                         else if bulletPointsTrue {
