@@ -148,3 +148,28 @@ choice BF
 right EVENT_1
 left EVENT_1
 
+choice BBB
+right ABD
+left BBC
+
+choice BBC
+right EVENT_1
+left EVENT_1
+
+choice BCA
+right BDA
+left none
+
+choice BDA
+right BDB
+left BF
+
+choice BDB
+right EVENT_1
+left EVENT_1
+
+choice EVENT_1
+major 1
+
+
+ 
