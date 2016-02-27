@@ -1,47 +1,60 @@
-    #type "choice NAME:" to start specifying content
-    #example
+choice A
 
-choice START
-
-content
-#All of your content stuff goes here. To go to a next line, type \n and this will be on the next line
-
-
-decision
-
-prompt
-All the stuff in the prompt
+content This is choice a's content
 
 leftPanel
+text this is choice a's left panel decision
 
-picture
-SOURCE TO PICTURE
+bulletPoints - This is bullet point 1 (lp) - This is bullet point 2 (lp) - This is bullet points 3 (lp)
 
-text
-the persons name and stuff
-
-bulletPoints
-- point one
-- point two
-- point three
-done
-
-cost
-1000
+cost 1000.50
+picture test
 
 rightPanel
+text this is choice a's right panel decision
 
-allowMoney
-(true/false)
+bulletPoints - This is bullet point 1 (rp) - This is bullet point 2 (rp) - This is bullet points 3 (rp)
 
-money earned 200
+cost 1000.50
+picture test
 
-#You can still do the same things for left panel
+choice AB
+
+content This is choice ab's content
+
+leftPanel
+text this is choice ab's left panel decision
+
+bulletPoints - This is bullet point 1 (lp) - This is bullet point 2 (lp) - This is bullet points 3 (lp)
+
+cost 1000.50
+picture test
+
+rightPanel
+text this is choice a's right panel decision
+
+bulletPoints - This is bullet point 1 (rp) - This is bullet point 2 (rp) - This is bullet points 3 (rp)
+
+cost 1000.50
+picture test
 
 
+choice BA
 
-panel1
-jfkldsjfk dsjkfdsjlkfds ljfklsdj fkls
+content This is choice ba's content
 
-panel2
-fkjdslfjdsklfjlksdjf klsdjklfsdjlkfjsd lkf
+leftPanel
+text this is choice ab's left panel decision
+
+bulletPoints - This is bullet point 1 (lp) - This is bullet point 2 (lp) - This is bullet points 3 (lp)
+
+cost 1000.50
+picture test
+
+rightPanel
+text this is choice a's right panel decision
+
+bulletPoints - This is bullet point 1 (rp) - This is bullet point 2 (rp) - This is bullet points 3 (rp)
+
+cost 1000.50
+picture test

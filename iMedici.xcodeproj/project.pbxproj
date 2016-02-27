@@ -18,6 +18,7 @@
 		A6655C801C6003AE0009D8FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A6655C7E1C6003AE0009D8FF /* LaunchScreen.storyboard */; };
 		A6655C8B1C6003AE0009D8FF /* iMediciTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6655C8A1C6003AE0009D8FF /* iMediciTests.swift */; };
 		A6655C961C6003AE0009D8FF /* iMediciUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6655C951C6003AE0009D8FF /* iMediciUITests.swift */; };
+		A693A5AC1C79695900B84628 /* Main.swift in Sources */ = {isa = PBXBuildFile; fileRef = A693A5AB1C79695900B84628 /* Main.swift */; };
 		A694D3E71C6548A800DC91A8 /* ChoiceTree.txt in Resources */ = {isa = PBXBuildFile; fileRef = A694D3E61C6548A800DC91A8 /* ChoiceTree.txt */; };
 		A694D3E91C65498600DC91A8 /* ChoiceContent.txt in Resources */ = {isa = PBXBuildFile; fileRef = A694D3E81C65498600DC91A8 /* ChoiceContent.txt */; };
 		A694D3EC1C654AEC00DC91A8 /* Choice.swift in Sources */ = {isa = PBXBuildFile; fileRef = A694D3EB1C654AEC00DC91A8 /* Choice.swift */; };
@@ -62,6 +63,7 @@
 		A6655C911C6003AE0009D8FF /* iMediciUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = iMediciUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A6655C951C6003AE0009D8FF /* iMediciUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iMediciUITests.swift; sourceTree = "<group>"; };
 		A6655C971C6003AE0009D8FF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A693A5AB1C79695900B84628 /* Main.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Main.swift; sourceTree = "<group>"; };
 		A694D3E61C6548A800DC91A8 /* ChoiceTree.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = ChoiceTree.txt; sourceTree = "<group>"; };
 		A694D3E81C65498600DC91A8 /* ChoiceContent.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = ChoiceContent.txt; sourceTree = "<group>"; };
 		A694D3EB1C654AEC00DC91A8 /* Choice.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Choice.swift; sourceTree = "<group>"; };
@@ -217,6 +219,7 @@
 				A6BFBD5F1C6A83E600590E9A /* FileIO */,
 				A694D3EA1C654AE300DC91A8 /* Core */,
 				A6655C751C6003AE0009D8FF /* AppDelegate.swift */,
+				A693A5AB1C79695900B84628 /* Main.swift */,
 			);
 			name = Logic;
 			sourceTree = "<group>";
@@ -369,6 +372,7 @@
 				A6959EDF1C6D374300284EB0 /* Content.swift in Sources */,
 				A6BFBD611C6A83EF00590E9A /* StreamReader.swift in Sources */,
 				A6655C761C6003AE0009D8FF /* AppDelegate.swift in Sources */,
+				A693A5AC1C79695900B84628 /* Main.swift in Sources */,
 				A6BFBD631C6A8F3A00590E9A /* Extensions.swift in Sources */,
 				A6235F231C65D13000C2E5E0 /* StoryHandler.swift in Sources */,
 				A6426A5A1C619C7E00B002E7 /* ContentTableViewCell.swift in Sources */,

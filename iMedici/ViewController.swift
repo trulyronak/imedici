@@ -13,6 +13,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     @IBOutlet var tableView: UITableView!
     @IBOutlet var moneyLabel: UILabel!
     @IBOutlet var yearLabel: UILabel!
+    var main: Main!
     
     //demo, will remove later
     var currentRow = 0
@@ -20,6 +21,11 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        main = Main()
+    }
+    
+    func loadCells() {
+        
     }
     
     override func didReceiveMemoryWarning() {

@@ -6,7 +6,6 @@
 //  Copyright © 2016 Shah Industries. All rights reserved.
 //
 
-import Foundation
 
 extension String {
     
@@ -14,6 +13,17 @@ extension String {
     func wordAtIndex(index: Int) -> String? {
         var words = self.componentsSeparatedByString(" ")
         return words[index]
+    }
+    
+    ///Drops First Word (and space) in word
+    func dropFirst() -> String? {
+        var new = self
+        let first = self.wordAtIndex(0)
+        print(first?.characters.count)
+        for var j = 0; j < first?.characters.count; j++ {
+            new = String(new.characters.dropFirst())
+        }
+        return new
     }
     
 }

@@ -10,9 +10,10 @@ import UIKit
 
 class DecisionTableViewCell: UITableViewCell {
 
-    @IBOutlet var questionView: UITextView!
-    @IBOutlet var leftDecision: UITextView!
-    @IBOutlet var rightDecision: UITextView!
+    @IBOutlet var prompt: UITextView!
+    @IBOutlet var leftPanel: UITextView!
+    @IBOutlet var rightPanel: UITextView!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

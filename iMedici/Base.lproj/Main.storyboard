@@ -69,7 +69,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="contentCell" rowHeight="70" id="Qa4-u8-BUQ" customClass="ContentTableViewCell" customModule="iMedici" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="contentCell" rowHeight="70" id="Qa4-u8-BUQ" customClass="ContentTableViewCell">
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Qa4-u8-BUQ" id="udA-Ze-avT">
                                             <rect key="frame" x="0.0" y="0.0" width="240" height="70"/>
@@ -81,6 +81,9 @@
                                                     <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                     <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="14"/>
                                                     <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                                    <variation key="widthClass=compact" misplaced="YES">
+                                                        <rect key="frame" x="38" y="0.0" width="164" height="128"/>
+                                                    </variation>
                                                 </textView>
                                             </subviews>
                                             <color key="backgroundColor" white="1" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -135,8 +138,7 @@
                                                             <exclude reference="YTV-En-7no"/>
                                                         </mask>
                                                     </variation>
-                                                    <variation key="widthClass=compact" misplaced="YES">
-                                                        <rect key="frame" x="38" y="8" width="163" height="37"/>
+                                                    <variation key="widthClass=compact">
                                                         <mask key="constraints">
                                                             <include reference="YTV-En-7no"/>
                                                         </mask>
@@ -156,8 +158,7 @@
                                                             <exclude reference="jqw-Pb-wM2"/>
                                                         </mask>
                                                     </variation>
-                                                    <variation key="widthClass=compact" misplaced="YES">
-                                                        <rect key="frame" x="38" y="53" width="78" height="78"/>
+                                                    <variation key="widthClass=compact">
                                                         <mask key="constraints">
                                                             <include reference="jqw-Pb-wM2"/>
                                                         </mask>
@@ -177,8 +178,7 @@
                                                             <exclude reference="kbG-PL-YpT"/>
                                                         </mask>
                                                     </variation>
-                                                    <variation key="widthClass=compact" misplaced="YES">
-                                                        <rect key="frame" x="124" y="53" width="77" height="78"/>
+                                                    <variation key="widthClass=compact">
                                                         <mask key="constraints">
                                                             <include reference="kbG-PL-YpT"/>
                                                         </mask>
@@ -199,8 +199,7 @@
                                                             <exclude reference="Fxa-7q-NEn"/>
                                                         </mask>
                                                     </variation>
-                                                    <variation key="widthClass=compact" misplaced="YES">
-                                                        <rect key="frame" x="38" y="139" width="230" height="54"/>
+                                                    <variation key="widthClass=compact">
                                                         <mask key="constraints">
                                                             <include reference="Fxa-7q-NEn"/>
                                                         </mask>
@@ -283,9 +282,9 @@
                                             </variation>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <outlet property="leftDecision" destination="spD-oo-dOZ" id="qb1-16-F2w"/>
-                                            <outlet property="questionView" destination="d0M-Pr-Y7O" id="55D-jA-Dgt"/>
-                                            <outlet property="rightDecision" destination="pdQ-9q-JQn" id="aVa-Ml-fCz"/>
+                                            <outlet property="leftPanel" destination="spD-oo-dOZ" id="g45-ue-sBW"/>
+                                            <outlet property="prompt" destination="d0M-Pr-Y7O" id="rIz-MS-vn5"/>
+                                            <outlet property="rightPanel" destination="pdQ-9q-JQn" id="C28-vB-IUx"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>

@@ -12,15 +12,18 @@ class Choice: NSObject, NSCoding {
     var isActive:Bool
     var decision: Decision!
     var identifier: String
-    
+    var content: Content!
+    var major: Int //1 or 2
     //tree
-    var left: Choice?
-    var right: Choice?
+    var left: String?
+    var right: String?
     
     init(identity: String) {
         self.identifier = identity
         isActive = false
         decision = nil
+        content = nil
+        major = 0
     }
     
     //data management protocols
@@ -28,12 +31,21 @@ class Choice: NSObject, NSCoding {
         coder.encodeObject(isActive, forKey: "isActive")
         coder.encodeObject(decision, forKey: "decision")
         coder.encodeObject(identifier, forKey: "identifier")
+        coder.encodeObject(content, forKey: "content")
+        coder.encodeObject(major, forKey: "major")
+        
+        coder.encodeObject(left, forKey: "left")
+        coder.encodeObject(right, forKey: "right")
     }
     
     required init(coder: NSCoder) {
         self.isActive = coder.decodeObjectForKey("isActive") as! Bool
         self.decision = coder.decodeObjectForKey("decision") as! Decision
         self.identifier = coder.decodeObjectForKey("identifier") as! String
+        self.content = coder.decodeObjectForKey("content") as! Content
+        self.major = coder.decodeObjectForKey("major") as! Int
+        self.left = coder.decodeObjectForKey("left") as? String
+        self.right = coder.decodeObjectForKey("right") as? String
     }
 
     
