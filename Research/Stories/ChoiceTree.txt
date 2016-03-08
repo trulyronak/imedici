@@ -171,5 +171,350 @@ left EVENT_1
 choice EVENT_1
 major 1
 
+choice XA
+right XAA
+left XB
 
- 
+choice XB
+right XBA
+left XC
+
+choice XC
+right XD
+left none
+
+choice XD
+right XDA
+left XE
+
+choice XE
+right XEA
+left XF
+
+choice XF
+right XFA
+left XG
+
+choice XG
+right XGA
+left XH
+
+choice XH
+right EVENT_FINAL
+left EVENT_FINAL
+
+choice XGA
+right EVENT_FINAL
+left EVENT_FINAL
+
+choice XFA
+right XFB
+left XGA
+
+choice XFB
+right EVENT_FINAL
+left EVENT_FINAL
+
+choice XEA
+right XEB
+left XFA
+
+choice XEB
+right XEC
+left XFB
+
+choice XEC
+right EVENT_FINAL
+left EVENT_FINAL
+
+choice XDA
+right XDB
+left XEA
+
+choice XDB
+right XDC
+left XEB
+
+choice XDC
+right XBE
+left XDD
+
+choice XDD
+right none
+left XDE
+
+choice XDE
+right EVENT_FINAL
+left EVENT_FINAL
+
+choice XBA
+right XBB
+left XD
+
+choice XBB
+right XBC
+left XDB
+
+choice XBC
+right XBD
+left XDC
+
+choice XBD
+right none
+left XBE
+
+choice XBE
+right XBEA
+left XBF
+
+choice XBF
+right EVENT_FINAL
+left EVENT_FINAL
+
+choice XBEA
+right EVENT_FINAL
+left EVENT_FINAL
+
+choice XAA
+left XAB
+right XBA
+
+choice XAB
+right XAC
+left XABA
+
+choice XABA
+right none
+left XBB
+
+choice XAC
+right XACA
+left XAD
+
+choice XACA
+right YDA
+left none
+
+choice XAD
+right XADA
+left XBC
+
+choice XADA
+right XADB
+left XBD
+
+choice XADB
+right XADC
+left XBE
+
+choice XADC
+right YH
+left XBEA
+
+choice YA
+right YAA
+left YB
+
+choice YB
+right YBA
+left YC
+
+choice YC
+right YD
+left XAC
+
+choice YD
+right YE
+left YDA
+
+choice YE
+right YEA
+left YF
+
+choice YF
+right YG
+left XADC
+
+choice YG
+left YH
+right none
+
+choice YH
+right EVENT_FINAL
+left EVENT_FINAL
+
+choice YDA
+right YF
+left XADB
+
+choice YEA
+right YEB
+left YF
+
+choice YEB
+right YEBA
+left YEC
+
+choice YEBA
+right EVENT_FINAL
+left EVENT_FINAL
+
+choice YEC
+right EVENT_FINAL
+left EVENT_FINAL
+
+choice YBA
+right YBB
+left none
+
+choice YBB
+right YBC
+left YE
+
+choice YBC
+right YBD
+left YEA
+
+choice YBD
+right YADA
+left YEB
+
+choice YAA
+right YAB
+left YBA
+
+choice YAB
+right YAC
+left none
+
+choice YAC
+right YAD
+left YEA
+
+choice YAD
+right YAE
+left YADA
+
+choice YADA
+right YAEA
+left YEB
+
+choice YAE
+right YAF
+left YAEA
+
+choice YAEA
+right YAFA
+left YAEB
+
+choice YAEB
+right EVENT_FINAL
+left EVENT_FINAL
+
+choice YAFA
+right EVENT_FINAL
+left EVENT_FINAL
+
+choice YAF
+right YAG
+left YAFA
+
+choice YAG
+right EVENT_FINAL
+left EVENT_FINAL
+
+choice ZA
+right ZB
+left ZAA
+
+choice ZAA
+right ZBA
+left ZAB
+
+choice ZAB
+right ZBC
+left ZAC
+
+choice ZAC
+right ZAD
+left none
+
+choice ZAD
+right ZAE
+left YAF
+
+choice ZAE
+right ZAEA
+left ZAF
+
+choice ZAF
+right EVENT_FINAL
+left EVENT_FINAL
+
+choice ZAEA
+right EVENT_FINAL
+left EVENT_FINAL
+
+choice ZB
+right ZC
+left ZBA
+
+choice ZBA
+right ZBB
+left none
+
+choice ZBB
+right ZD
+left ZBC
+
+choice ZBC
+right ZDA
+left ZAD
+
+choice ZC
+right ZD
+left none
+
+choice ZD
+right ZE
+left ZDA
+
+choice ZDA
+right ZEA
+left ZDB
+
+choice ZDB
+right ZEB
+left ZAE
+
+choice ZE
+right ZF
+left ZEA
+
+choice ZEA
+right ZFA
+left ZEB
+
+choice ZEB
+right ZFB
+left ZAFA
+
+choice ZF
+right ZG
+left ZFA
+
+choice ZFA
+right ZH
+left ZFB
+
+choice ZFB
+right EVENT_FINAL
+left EVENT_FINAL
+
+choice ZG
+right ZH
+left none
+
+choice ZH
+right EVENT_FINAL
+left EVENT_FINAL
