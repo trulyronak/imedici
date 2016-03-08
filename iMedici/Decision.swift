@@ -12,17 +12,17 @@ class Decision: NSObject, NSCoding{
     var prompt: String!
     
     //left panel
-    var leftImage: UIImage!
-    var leftText: String!
-    var leftBulletPoints: [String]!
-    var cost: Double!
+    var leftImage: UIImage?
+    var leftText: String?
+    var leftBulletPoints: [String]?
+    var cost: Double?
     
     //right panel
-    var rightImage: UIImage!
-    var rightText: String!
-    var rightBulletPoints: [String]!
-    var moneyEarned: Double!
-    var allowMoney: Bool!
+    var rightImage: UIImage?
+    var rightText: String?
+    var rightBulletPoints: [String]?
+    var moneyEarned: Double?
+    var allowMoney: Bool?
     
     override init() {
         //left
@@ -35,13 +35,56 @@ class Decision: NSObject, NSCoding{
         rightText = nil
         rightBulletPoints = nil
         moneyEarned = nil
-        allowMoney = nil
+        allowMoney = false
         
         //general
         prompt = nil
         
         
     }
+    
+    func leftImageTrue() -> Bool {
+        if let _ = leftImage {
+            return true
+        }
+        return false
+    }
+    
+    func rightImageTrue() -> Bool {
+        if let _ = rightImage {
+            return true
+        }
+        return false
+    }
+    
+    func leftTextTrue() -> Bool {
+        if let _ = leftText {
+            return true
+        }
+        return false
+    }
+    
+    func rightTextTrue() -> Bool {
+        if let _ = rightText {
+            return true
+        }
+        return false
+    }
+    
+    func leftBulletPointsTrue() -> Bool {
+        if let _ = leftBulletPoints {
+            return true
+        }
+        return false
+    }
+    
+    func rightBulletPointsTrue() -> Bool {
+        if let _ = rightBulletPoints {
+            return true
+        }
+        return false
+    }
+    
     
     //data management protocols
     func encodeWithCoder(coder: NSCoder) {

@@ -13,18 +13,25 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     @IBOutlet var tableView: UITableView!
     @IBOutlet var moneyLabel: UILabel!
     @IBOutlet var yearLabel: UILabel!
-    var main: Main!
+    var cells: [UITableViewCell]!
     
     //demo, will remove later
-    var currentRow = 0
+    var decision = false
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
-        main = Main()
+        cells = [UITableViewCell]()
+        game = Main()
+    }
+    
+    override func viewDidAppear(animated: Bool) {
+        loadCells()
+        tableView.reloadData()
     }
     
     func loadCells() {
+        let newCells = game.getCurrentBlock(tableView)
+        cells.appendContentsOf(newCells)
         
     }
     
@@ -34,28 +41,37 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     }
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 2
+        return cells.count
     }
     
     
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell: UITableViewCell!
-        if currentRow == 0 {
-            cell = tableView.dequeueReusableCellWithIdentifier("contentCell")
-            tableView.rowHeight = 70
-            currentRow++
-        }
-        
-        else {
-            cell = tableView.dequeueReusableCellWithIdentifier("decisionCell")
+        if decision {
             tableView.rowHeight = 347
-            currentRow = 0
         }
-        cell.selectionStyle = UITableViewCellSelectionStyle.None
+        else{
+            tableView.rowHeight = 80
+        }
+        decision = !decision
+        let cell = cells[indexPath.row]
+        //cell.selectionStyle = UITableViewCellSelectionStyle.None
         
         return cell
     }
     
+    @IBAction func rightChosen(sender: UIButton) {
+        print("You Chosen Right!")
+        game.moveRight()
+        loadCells()
+        tableView.reloadData()
+    }
+    
+    @IBAction func leftChosen(sender: UIButton) {
+        print("You Chosen Left!")
+        game.moveLeft()
+        loadCells()
+        tableView.reloadData()
+    }
 }
 

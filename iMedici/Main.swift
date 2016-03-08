@@ -13,6 +13,7 @@ var game = Main()
 class Main {
     var currentChoice: Choice?
     var story: StoryHandler!
+    
     init(){
         //start game
         
@@ -21,28 +22,92 @@ class Main {
         currentChoice = story.startChoice
     }
     
-    func getCurrentBlock() -> [UITableViewCell]! {
+    //TODO: Figure out why prompt is not loading
+    func getCurrentBlock(tableView: UITableView) -> [UITableViewCell]! {
         var block = [UITableViewCell]()
         
         //content
         let content = currentChoice?.content
         
-        let contentSection = ContentTableViewCell()
-        var textView = UITextView()
-        textView.text! += (content?.text)!
-        contentSection.contentTextView = textView
-
+        let contentSection = tableView.dequeueReusableCellWithIdentifier("contentCell") as! ContentTableViewCell
+        contentSection.identifier = currentChoice?.identifier
+        contentSection.contentTextView.text = content?.text
+        contentSection.contentTextView.textColor = UIColor.whiteColor()
+        contentSection.contentTextView.font = UIFont(name: "Futura", size: 14)
+        contentSection.frame = CGRectMake(38, 0, 324, 72)
         block.append(contentSection)
         
         //decision
-        let decision = currentChoice?.decision
-        let decisionSection = DecisionTableViewCell()
-        //adding picture
+        let decision: Decision = (currentChoice?.decision)!
+        let decisionSection = tableView.dequeueReusableCellWithIdentifier("decisionCell") as! DecisionTableViewCell
+        decisionSection.identifier = currentChoice?.identifier
+        decisionSection.rightPanel.text = ""
+        decisionSection.leftPanel.text = ""
+        decisionSection.prompt.text = ""
+        print(decisionSection.heightAnchor)
+        decisionSection.rightPanel.frame = CGRectMake(212, 88, 149, 202)
+        decisionSection.leftPanel.frame = CGRectMake(38, 88, 166, 202)
+        decisionSection.prompt.frame = CGRectMake(38, 8, 323, 72)
         
-        textView = UITextView()
+        decisionSection.prompt.text = currentChoice?.decision.prompt
+        decisionSection.prompt.font = UIFont(name: "Futura", size: 14)
 
+        //right panel
+        
+        if ((decision.rightImageTrue())) {
+            let image = UIImageView(image: decision.rightImage)
+            decisionSection.rightPanel.addSubview(image)
+        }
+        if decision.rightTextTrue() {
+            decisionSection.rightPanel.text! += decision.rightText!
+            decisionSection.rightPanel.text! += "\n"
+        }
+        if decision.rightBulletPointsTrue() {
+            for bullet in decision.rightBulletPoints! {
+                decisionSection.rightPanel.text! += bullet
+                decisionSection.rightPanel.text! += "\n"
+            }
+        }
+        if decision.moneyEarned != nil {
+            decisionSection.rightPanel.text! += "$"
+            decisionSection.rightPanel.text! +=  "\(decision.moneyEarned!)"
+            decisionSection.rightPanel.text! += "\n"
+        }
+        decisionSection.rightPanel.textColor = UIColor.whiteColor()
+        decisionSection.rightPanel.font = UIFont(name: "Futura", size: 14)
+        //left panel
+        if ((decision.leftImageTrue())) {
+            let image = UIImageView(image: decision.leftImage)
+           decisionSection.rightPanel.addSubview(image)
+        }
+        if decision.leftTextTrue() {
+            decisionSection.leftPanel.text! += decision.leftText!
+            decisionSection.leftPanel.text! += "\n"
+        }
+        if decision.rightBulletPointsTrue() {
+            for bullet in decision.leftBulletPoints! {
+                decisionSection.leftPanel.text! += bullet
+                decisionSection.leftPanel.text! += "\n"
+            }
+        }
+        if decision.cost != nil {
+            decisionSection.leftPanel.text! += "$"
+            decisionSection.leftPanel.text! +=  "\(decision.cost!)"
+            decisionSection.leftPanel.text! += "\n"
+        }
+        decisionSection.leftPanel.textColor = UIColor.whiteColor()
+        decisionSection.leftPanel.font = UIFont(name: "Futura", size: 14)
         
         
-       return block
+        block.append(decisionSection)
+        
+        return block
+    }
+    
+    func moveRight() {
+        
+    }
+    func moveLeft() {
+        
     }
 }

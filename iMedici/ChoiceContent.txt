@@ -1,60 +1,197 @@
-choice A
+choice INTRO
+year 1425
+content
+Your name is Giovanni di Bicci de Medici, the leader of the Medici family. Over time, you have restored your family’s fortune after Salvestro tarnished it, but your life is coming to an end so you need to pass on the Medici lineage. The year is 1420, and there seems to be an flourish in learning and the arts across Italy, where you live. In Florence, you want to help contribute to the apparent rebirth in Greco-Roman ideals by funding artists and becoming a patron of the arts. However, artistic ventures are rather expensive, and you need to continue your family’s banking business. Now, you decide. Spanning over 100 years, Medici will cover the High Renaissance through the perspective of the influential Medici family. You must decide which artists to sponsor and which do not. You must also make sure not to go bankrupt, as that will mean an immediate GAME OVER. Also, you must still sponsor pieces or you will lose all your reputation as a sponsor. Let the Renaissance begin!
 
-content This is choice a's content
-
+decision
+prompt However, before you start sponsoring patrons, you must decide who to pass your lineage on. before you die. Your decision will decide who you (the player) will play as for the course of the game.
 leftPanel
-text this is choice a's left panel decision
-
-bulletPoints - This is bullet point 1 (lp) - This is bullet point 2 (lp) - This is bullet points 3 (lp)
-
-cost 1000.50
-picture test
+#AA
+text Lorenzo the Elder
+picture LorenzoElder
+bulletPoints - ambassador to Pope Eugene IV - Talented Banker
 
 rightPanel
-text this is choice a's right panel decision
+#BA
+text Cosimo il Vecchio
+bulletPoints - Priore of the Republic - Expert Banker
+allowMoney false
 
-bulletPoints - This is bullet point 1 (rp) - This is bullet point 2 (rp) - This is bullet points 3 (rp)
 
-cost 1000.50
-picture test
+choice AA
+year 1430
+content
+Your father, Giovanni di Bicci, had perished one year ago. Now, as the head of the banking business, you, Lorenzo the Elder, must decide the fate of your family’s business. You heard recently that a painter, Jacobello del Fiore, had asked your father to fund him for a painting named Accademia that was to be paying homage to Christianity, and had asked to meet you in his stead.
 
-choice AB
+decision
 
-content This is choice ab's content
-
-leftPanel
-text this is choice ab's left panel decision
-
-bulletPoints - This is bullet point 1 (lp) - This is bullet point 2 (lp) - This is bullet points 3 (lp)
-
-cost 1000.50
-picture test
+prompt Will you sponsor him, or will you continue focus on banking for a larger budget?
 
 rightPanel
-text this is choice a's right panel decision
-
-bulletPoints - This is bullet point 1 (rp) - This is bullet point 2 (rp) - This is bullet points 3 (rp)
-
-cost 1000.50
-picture test
-
+#AB
+text Jacobello del Fiore
+picture JacobelloFiore
+bulletPoints - Gothic style - painter of more famous Madonna of Mercy
+rep 1
+cost 1000
+done
+leftPanel
+#BB
+text Don’t Patron; Use money to continue banking
+allowMoney true
+moneyEarned 200
+done
 
 choice BA
-
-content This is choice ba's content
+year 1430
+content
+Your father, Giovanni di Bicci, has passed away, leaving you, Cosimo il Vecchio as the heir to the Medici family. As the head of the banking business, you must make sure to hold on to the family fortune your father worked so hard to acquire.
+decision
+prompt However, you have heard recently that the painter Jacobello del Fiore is looking for a patron to give him money so that he can create his painting, Accademia. Will you sponsor him, or will you continue your banking pursuits to make more money?
 
 leftPanel
-text this is choice ab's left panel decision
+# BB
+text Jacobello del Fiore
 
-bulletPoints - This is bullet point 1 (lp) - This is bullet point 2 (lp) - This is bullet points 3 (lp)
+picture JacobelloFiore
 
-cost 1000.50
-picture test
+bulletPoints - Gothic Painter - painter of the famous Madonna of Mercy
+
+rep 1
+cost 1000
+done
+rightPanel
+#AB
+text Don’t Patron; Use money to continue banking
+allowMoney true
+moneyEarned 200
+done
+
+choice AB
+year 1433
+content
+The next painter waiting for your financial help is Domenico di Bartolo, who wants to commission of Madonna of Humility.
+decision
+prompt Will you choose him for painting or will you instead pursue banking to increase your budget?
+
+leftPanel
+#AC
+text Don’t Patron; Use money to continue banking
+allowMoney true
+moneyEarned 200
+done
 
 rightPanel
-text this is choice a's right panel decision
+#ABA
+text Domenico di Bartolo
+picture DomenicoBartolo
+bulletPoints - Early Renaissance style - combination of religion and humanism
+rep 2
+cost 200
+done
 
-bulletPoints - This is bullet point 1 (rp) - This is bullet point 2 (rp) - This is bullet points 3 (rp)
+choice BB
+year 1434
+content
+The painter Donato di Niccolo di Betto Bardi, a friend of yours, wants you to sponsor him for a marble pulpit on the facade of the Partho cathedral.
+prompt Will you sponsor him?
+rightPanel
+# BBA
+text Don’t Patron; Use money to continue banking
+allowMoney true
+moneyEarned 220
+done
+leftPanel
+# BC
+text Donato di Niccolo di Betto Bardi
+bulletPoints - Famous Sculptor - Studied Classical Sculpture - Inspired by classical Roman sculpture
+picture Donatello
+rep 6
+cost 450
+done
 
-cost 1000.50
-picture test
+choice AC
+year 1440
+
+content
+The famous sculptor Donatello has approached you for the commissioning of Young Man with a Cameo, and wants to do it for a discount of 75% off.
+decision
+prompt This is a one-time offer that you CANNOT refuse.
+rightPanel none
+done
+leftPanel
+#AD
+text Take Offer
+rep 1
+cost 175
+done
+
+choice ABA
+year 1440
+content The next artist is Fra Filippo Lippi, who wants to commission Madonna and Child.
+decision
+prompt Will Lippi be your next patronage investment?
+rightPanel
+#AD
+text Fra Filippo Lippi
+bulletPoints - Early Renaissance painter - worked on Madonna and Child paintings
+picture FraLippi
+rep 1
+cost 250
+done
+leftPanel
+#ABB
+text Don’t Patron; Use money to continue banking
+allowMoney true
+moneyEarned 220
+done
+choice BC
+year 1440
+
+content
+Donatello has come back to you again, asking you for money to create a bust of a Young Man with a Cameo. However, a businessman has come to you with a proposition to make 400 florins.
+
+
+decision
+prompt Who will you choose? Donatello, or the Businessman?
+
+rightPanel
+# BCA
+text
+Businessman’s Proposition
+allowMoney true
+moneyEarned 400
+picture MediumMoney
+done
+
+leftPanel
+# BD
+text Donatello
+picture Donatello
+bulletPoints - would be the first lay bust portrait since the classical era
+cost 700
+done
+
+choice BBA
+#didnt choose donatello the first time, went for money
+year 1447
+content
+The artist Sano di Pietro has asked for money to create his painting, Virgin and Child.
+
+prompt
+Will you sponsor Pietro?
+
+rightPanel
+# BBB
+text Don’t Patron; Use money to continue banking
+allowMoney true
+moneyEarned 220
+done
+
+leftPanel
+# BCA
+bulletPoints - Very famous painter of the time - Very Religious
+picture SanoDiPietro
+cost 300
+rep 2
+done

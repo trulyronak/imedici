@@ -14,6 +14,7 @@ class Choice: NSObject, NSCoding {
     var identifier: String
     var content: Content!
     var major: Int //1 or 2
+    var year: Int
     //tree
     var left: String?
     var right: String?
@@ -24,6 +25,7 @@ class Choice: NSObject, NSCoding {
         decision = nil
         content = nil
         major = 0
+        year = 1420
     }
     
     //data management protocols
@@ -33,7 +35,7 @@ class Choice: NSObject, NSCoding {
         coder.encodeObject(identifier, forKey: "identifier")
         coder.encodeObject(content, forKey: "content")
         coder.encodeObject(major, forKey: "major")
-        
+        coder.encodeObject(year, forKey: "year")
         coder.encodeObject(left, forKey: "left")
         coder.encodeObject(right, forKey: "right")
     }
@@ -44,9 +46,11 @@ class Choice: NSObject, NSCoding {
         self.identifier = coder.decodeObjectForKey("identifier") as! String
         self.content = coder.decodeObjectForKey("content") as! Content
         self.major = coder.decodeObjectForKey("major") as! Int
+        self.year = coder.decodeObjectForKey("year") as! Int
         self.left = coder.decodeObjectForKey("left") as? String
         self.right = coder.decodeObjectForKey("right") as? String
     }
+
 
     
 }

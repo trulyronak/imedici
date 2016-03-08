@@ -12,9 +12,13 @@ class ContentTableViewCell: UITableViewCell {
 
     @IBOutlet var contentTextView: UITextView!
 
+    var identifier: String!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
+        contentTextView.text = ""
+        contentTextView.textColor = UIColor.whiteColor()
     }
 
     override func setSelected(selected: Bool, animated: Bool) {

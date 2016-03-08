@@ -32,7 +32,7 @@ class Reader {
                         break
                     case "s" :
                         //case start
-                        let nextWord = line.wordAtIndex(2) //ignore = sign
+                        let nextWord = line.wordAtIndex(1) //ignore = sign
                         if startChoice == nil {
                             startChoice = nextWord
                         }
@@ -71,10 +71,7 @@ class Reader {
             defer {
                 reader.close()
             }
-            print("")
-            print("Choices That Loaded \(choices)")
-            print("Starting Choice \(startChoice)")
-            print("")
+            
         }
         else {
             worked = false
@@ -94,8 +91,9 @@ class Reader {
         
         if let reader = StreamReader(path: file) {
             while let line = reader.nextLine() {
-                if line == "" {}
+                if line == "" || line == "#" {}
                 else if leftPanel {
+                    print("In Left Panel")
                     if line.wordAtIndex(0) == "picture" {
                         currentChoice.decision.leftImage = UIImage(named: line.wordAtIndex(1)!)
                     }
@@ -104,18 +102,14 @@ class Reader {
                     }
                     else if line.wordAtIndex(0) == "bulletPoints" {
                         var newLine = line.dropFirst()
-                        newLine = newLine?.stringByReplacingOccurrencesOfString(" - ", withString: " @ ")
-                        let wordArr = newLine!.componentsSeparatedByString(" ")
-                        var bullet = ""
-                        var bullets = [String]()
-                        for word in wordArr {
-                            if word == "@" {
-                                bullets.append(bullet)
-                            }
-                            else {
-                                bullet += word
-                            }
-                        }
+                        //newLine = String(newLine!.characters.dropFirst())
+                        newLine = newLine?.stringByReplacingOccurrencesOfString(" - ", withString: "@ ")
+                        
+                        let wordArr = newLine!.componentsSeparatedByString("@ ")
+                        
+                        var bullets = wordArr
+                        bullets = Array(bullets.dropFirst())
+                        print(bullets)
                         currentChoice.decision.leftBulletPoints = bullets
                     }
                     else if line.wordAtIndex(0) == "cost" {
@@ -140,6 +134,7 @@ class Reader {
                     }
                 }
                 else if rightPanel {
+                    print("In Right Panel")
                     if line.wordAtIndex(0) == "picture" {
                         currentChoice.decision.rightImage = UIImage(named: line.wordAtIndex(1)!)
                     }
@@ -148,18 +143,14 @@ class Reader {
                     }
                     else if line.wordAtIndex(0) == "bulletPoints" {
                         var newLine = line.dropFirst()
-                        newLine = newLine?.stringByReplacingOccurrencesOfString(" - ", withString: " @ ")
-                        let wordArr = newLine!.componentsSeparatedByString(" ")
-                        var bullet = ""
-                        var bullets = [String]()
-                        for word in wordArr {
-                            if word == "@" {
-                                bullets.append(bullet)
-                            }
-                            else {
-                                bullet += word
-                            }
-                        }
+                        //newLine = String(newLine!.characters.dropFirst())
+                        newLine = newLine?.stringByReplacingOccurrencesOfString(" - ", withString: "@ ")
+                        
+                        let wordArr = newLine!.componentsSeparatedByString("@ ")
+                        
+                        var bullets = wordArr
+                        
+                        bullets = Array(bullets.dropFirst())
                         currentChoice.decision.rightBulletPoints = bullets
                     }
                     else if line.wordAtIndex(0) == "cost" {
@@ -183,7 +174,13 @@ class Reader {
                         rightPanel = false
                     }
                 }
+                else if contentTrue {
+                    print("In Content True")
+                    currentChoice.content = Content(text: line)
+                    contentTrue = false
+                }
                 else if decisionTrue {
+                    print("In Decision True")
                     let indicator = line
                     
                     if line.wordAtIndex(0) == "prompt" {
@@ -198,17 +195,17 @@ class Reader {
                     }
                 }
                 else {
-                    if line.wordAtIndex(0) == "#" {
-                        //do nothing, its a comment
-                    }
-                    else if (line.wordAtIndex(0) == "choice") {
+                    if (line.wordAtIndex(0) == "choice") {
                         currentChoice = choices[line.wordAtIndex(1)!]
+                        print("Current Choice: \(line.wordAtIndex(1))")
+                        print("")
+                    }
+                    else if (line.wordAtIndex(0) == "year") {
+                        currentChoice.year = Int(line.wordAtIndex(1)!)!
                     }
                     else if (line.wordAtIndex(0) == "content") {
+                        print("In Content")
                         contentTrue = true
-                        let text = line.dropFirst()
-                        let content = Content(text: text!)
-                        currentChoice.content = content
                     }
                     else if (line == "decision") {
                         decisionTrue = true
