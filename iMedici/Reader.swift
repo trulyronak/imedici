@@ -91,7 +91,7 @@ class Reader {
         
         if let reader = StreamReader(path: file) {
             while let line = reader.nextLine() {
-                if line == "" || line == "#" {}
+                if line == "" || line.dropFirst()!.containsString("#") {}
                 else if leftPanel {
                     print("In Left Panel")
                     if line.wordAtIndex(0) == "picture" {
@@ -192,6 +192,12 @@ class Reader {
                     }
                     else if indicator == "rightPanel" {
                         rightPanel = true
+                    }
+                    else if (line.wordAtIndex(0) == "choice") {
+                        currentChoice = choices[line.wordAtIndex(1)!]
+                        print("Current Choice: \(line.wordAtIndex(1))")
+                        print("")
+                        decisionTrue = false
                     }
                 }
                 else {

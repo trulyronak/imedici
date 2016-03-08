@@ -13,6 +13,8 @@ var game = Main()
 class Main {
     var currentChoice: Choice?
     var story: StoryHandler!
+    var reputation: Int
+    var money: Double
     
     init(){
         //start game
@@ -20,6 +22,8 @@ class Main {
         story = StoryHandler()
         story.readLevel()
         currentChoice = story.startChoice
+        money = 10000
+        reputation = 0
     }
     
     //TODO: Figure out why prompt is not loading
@@ -36,6 +40,9 @@ class Main {
         contentSection.contentTextView.font = UIFont(name: "Futura", size: 14)
         contentSection.frame = CGRectMake(38, 0, 324, 72)
         block.append(contentSection)
+        if currentChoice?.identifier == "INTRO" {
+            contentSection.frame = CGRectMake(38, 0, 324, 400)
+        }
         
         //decision
         let decision: Decision = (currentChoice?.decision)!
@@ -50,8 +57,9 @@ class Main {
         decisionSection.prompt.frame = CGRectMake(38, 8, 323, 72)
         
         decisionSection.prompt.text = currentChoice?.decision.prompt
+        decisionSection.prompt.textColor = UIColor.whiteColor()
         decisionSection.prompt.font = UIFont(name: "Futura", size: 14)
-
+        
         //right panel
         
         if ((decision.rightImageTrue())) {
@@ -78,7 +86,7 @@ class Main {
         //left panel
         if ((decision.leftImageTrue())) {
             let image = UIImageView(image: decision.leftImage)
-           decisionSection.rightPanel.addSubview(image)
+            decisionSection.rightPanel.addSubview(image)
         }
         if decision.leftTextTrue() {
             decisionSection.leftPanel.text! += decision.leftText!
@@ -105,9 +113,19 @@ class Main {
     }
     
     func moveRight() {
-        
+        if currentChoice?.major != 0 {}
+        else {
+            money += (currentChoice?.decision.moneyEarned)!
+            currentChoice = story.choices[(currentChoice?.right)!]
+            reputation -= 1
+        }
     }
     func moveLeft() {
-        
+        if currentChoice?.major != 0 {}
+        else {
+            money -= (currentChoice?.decision.cost!)!
+            reputation += (currentChoice?.decision.leftReputation)!
+            currentChoice = story.choices[(currentChoice?.left)!]
+        }
     }
 }

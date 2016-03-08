@@ -32,7 +32,8 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     func loadCells() {
         let newCells = game.getCurrentBlock(tableView)
         cells.appendContentsOf(newCells)
-        
+        updateUI()
+        tableView.reloadData()
     }
     
     override func didReceiveMemoryWarning() {
@@ -44,7 +45,12 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         return cells.count
     }
     
-    
+    func updateUI() {
+        moneyLabel.text = String(game.money)
+        if let year = game.currentChoice?.year {
+            yearLabel.text = String(year)
+        }
+    }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         if decision {
@@ -64,14 +70,12 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         print("You Chosen Right!")
         game.moveRight()
         loadCells()
-        tableView.reloadData()
     }
     
     @IBAction func leftChosen(sender: UIButton) {
         print("You Chosen Left!")
         game.moveLeft()
         loadCells()
-        tableView.reloadData()
     }
 }
 

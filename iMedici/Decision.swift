@@ -16,13 +16,15 @@ class Decision: NSObject, NSCoding{
     var leftText: String?
     var leftBulletPoints: [String]?
     var cost: Double?
-    
+    var leftReputation: Int!
+
     //right panel
     var rightImage: UIImage?
     var rightText: String?
     var rightBulletPoints: [String]?
     var moneyEarned: Double?
     var allowMoney: Bool?
+
     
     override init() {
         //left
@@ -30,13 +32,13 @@ class Decision: NSObject, NSCoding{
         leftText = nil
         leftBulletPoints = nil
         cost = nil
+        leftReputation = 0
         //right
         rightImage = nil
         rightText = nil
         rightBulletPoints = nil
         moneyEarned = nil
         allowMoney = false
-        
         //general
         prompt = nil
         
@@ -85,6 +87,13 @@ class Decision: NSObject, NSCoding{
         return false
     }
     
+    func leftReputationTrue() -> Bool {
+        if let _ = leftReputation {
+            return true
+        }
+        return false
+    }
+    
     
     //data management protocols
     func encodeWithCoder(coder: NSCoder) {
@@ -95,7 +104,8 @@ class Decision: NSObject, NSCoding{
         coder.encodeObject(leftImage, forKey: "leftImage")
         coder.encodeObject(leftText, forKey: "leftText")
         coder.encodeObject(leftBulletPoints, forKey: "leftBulletPoints")
-        
+        coder.encodeObject(leftReputation, forKey: "reputation")
+
         //right panel objects
         coder.encodeObject(rightImage, forKey: "rightImage")
         coder.encodeObject(rightText, forKey: "rightText")
