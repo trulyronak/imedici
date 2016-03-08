@@ -70,12 +70,16 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         print("You Chosen Right!")
         game.moveRight()
         loadCells()
+        sender.removeTarget(nil, action: nil, forControlEvents: .AllEvents)
+
+
     }
     
     @IBAction func leftChosen(sender: UIButton) {
+        //includes majors
         print("You Chosen Left!")
         game.moveLeft()
         loadCells()
-    }
+           }
 }
 

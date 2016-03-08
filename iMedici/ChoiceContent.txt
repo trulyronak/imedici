@@ -1,7 +1,6 @@
 choice INTRO
 year 1425
-content
-Your name is Giovanni di Bicci de Medici, the leader of the Medici family. Over time, you have restored your family’s fortune after Salvestro tarnished it, but your life is coming to an end so you need to pass on the Medici lineage. The year is 1420, and there seems to be an flourish in learning and the arts across Italy, where you live. In Florence, you want to help contribute to the apparent rebirth in Greco-Roman ideals by funding artists and becoming a patron of the arts. However, artistic ventures are rather expensive, and you need to continue your family’s banking business. Now, you decide. Spanning over 100 years, Medici will cover the High Renaissance through the perspective of the influential Medici family. You must decide which artists to sponsor and which do not. You must also make sure not to go bankrupt, as that will mean an immediate GAME OVER. Also, you must still sponsor pieces or you will lose all your reputation as a sponsor. Let the Renaissance begin!
+content Your name is Giovanni di Bicci de Medici, the leader of the Medici family. Over time, you have restored your family’s fortune after Salvestro tarnished it, but your life is coming to an end so you need to pass on the Medici lineage. The year is 1420, and there seems to be an flourish in learning and the arts across Italy, where you live. In Florence, you want to help contribute to the apparent rebirth in Greco-Roman ideals by funding artists and becoming a patron of the arts. However, artistic ventures are rather expensive, and you need to continue your family’s banking business. Now, you decide. Spanning over 100 years, Medici will cover the High Renaissance through the perspective of the influential Medici family. You must decide which artists to sponsor and which do not. You must also make sure not to go bankrupt, as that will mean an immediate GAME OVER. Also, you must still sponsor pieces or you will lose all your reputation as a sponsor. Let the Renaissance begin!
 
 decision
 prompt However, before you start sponsoring patrons, you must decide who to pass your lineage on. before you die. Your decision will decide who you (the player) will play as for the course of the game.
@@ -10,18 +9,19 @@ leftPanel
 text Lorenzo the Elder
 picture LorenzoElder
 bulletPoints - ambassador to Pope Eugene IV - Talented Banker
-
+done
 rightPanel
 #BA
 text Cosimo il Vecchio
 bulletPoints - Priore of the Republic - Expert Banker
 allowMoney false
+done
+
 
 
 choice AA
 year 1430
-content
-Your father, Giovanni di Bicci, had perished one year ago. Now, as the head of the banking business, you, Lorenzo the Elder, must decide the fate of your family’s business. You heard recently that a painter, Jacobello del Fiore, had asked your father to fund him for a painting named Accademia that was to be paying homage to Christianity, and had asked to meet you in his stead.
+content Your father, Giovanni di Bicci, had perished one year ago. Now, as the head of the banking business, you, Lorenzo the Elder, must decide the fate of your family’s business. You heard recently that a painter, Jacobello del Fiore, had asked your father to fund him for a painting named Accademia that was to be paying homage to Christianity, and had asked to meet you in his stead.
 
 decision
 
@@ -44,8 +44,7 @@ done
 
 choice BA
 year 1430
-content
-Your father, Giovanni di Bicci, has passed away, leaving you, Cosimo il Vecchio as the heir to the Medici family. As the head of the banking business, you must make sure to hold on to the family fortune your father worked so hard to acquire.
+content Your father, Giovanni di Bicci, has passed away, leaving you, Cosimo il Vecchio as the heir to the Medici family. As the head of the banking business, you must make sure to hold on to the family fortune your father worked so hard to acquire.
 decision
 prompt However, you have heard recently that the painter Jacobello del Fiore is looking for a patron to give him money so that he can create his painting, Accademia. Will you sponsor him, or will you continue your banking pursuits to make more money?
 
@@ -69,8 +68,7 @@ done
 
 choice AB
 year 1433
-content
-The next painter waiting for your financial help is Domenico di Bartolo, who wants to commission of Madonna of Humility.
+content The next painter waiting for your financial help is Domenico di Bartolo, who wants to commission of Madonna of Humility.
 decision
 prompt Will you choose him for painting or will you instead pursue banking to increase your budget?
 
@@ -92,8 +90,8 @@ done
 
 choice BB
 year 1434
-content
-The painter Donato di Niccolo di Betto Bardi, a friend of yours, wants you to sponsor him for a marble pulpit on the facade of the Partho cathedral.
+content The painter Donato di Niccolo di Betto Bardi, a friend of yours, wants you to sponsor him for a marble pulpit on the facade of the Partho cathedral.
+decision
 prompt Will you sponsor him?
 rightPanel
 # BBA
@@ -113,14 +111,13 @@ done
 choice AC
 year 1440
 
-content
-The famous sculptor Donatello has approached you for the commissioning of Young Man with a Cameo, and wants to do it for a discount of 75% off.
+content The famous sculptor Donatello has approached you for the commissioning of Young Man with a Cameo, and wants to do it for a discount of 75% off.
 decision
 prompt This is a one-time offer that you CANNOT refuse.
 rightPanel none
 done
 leftPanel
-#AD
+ #AD
 text Take Offer
 rep 1
 cost 175
@@ -157,8 +154,7 @@ prompt Who will you choose? Donatello, or the Businessman?
 
 rightPanel
 # BCA
-text
-Businessman’s Proposition
+text Businessman’s Proposition
 allowMoney true
 moneyEarned 400
 picture MediumMoney
@@ -178,8 +174,7 @@ year 1447
 content
 The artist Sano di Pietro has asked for money to create his painting, Virgin and Child.
 
-prompt
-Will you sponsor Pietro?
+prompt Will you sponsor Pietro?
 
 rightPanel
 # BBB
@@ -194,4 +189,59 @@ bulletPoints - Very famous painter of the time - Very Religious
 picture SanoDiPietro
 cost 300
 rep 2
+done
+
+choice AD
+year 1445
+content The next artist is Luca della Robbia with his piece, Visitation.
+decision
+prompt Will you fund Luca’s efforts?
+rightPanel
+#AE
+text Luca della Robbia
+picture LucaRobbia
+bulletPoints - is a tin-covered terracotta piece - developed sculpting technique by himself - worked in stone and terracotta
+cost 250
+rep 2
+done
+leftPanel
+#ADA
+text Don’t Patron; Use money to continue banking
+allowMoney true
+moneyEarned 220
+done
+
+choice AE
+year 1450
+content After a mishap with one of your locations in Florence, some of the records of customers of the bank were burnt, making a major dent in your finances.
+decision
+prompt You lost 400 florins in damages and repayments for the mishap.
+decision.
+
+leftPanel
+#AF
+text Continue
+cost 400
+Rep -1
+done
+
+
+
+choice AF
+year 1448
+content The next artist is Sano di Pietro with his Birth of the Virgin.
+decision
+prompt Will you take the offer?
+rightPanel
+#AG
+text Sano di Pietro
+picture SanoPietro
+cost 200
+rep 1
+done
+leftPanel
+#AFA
+text Don’t Patron; Use money to continue banking
+allowMoney true
+moneyEarned 220
 done

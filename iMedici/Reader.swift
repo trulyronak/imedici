@@ -91,6 +91,9 @@ class Reader {
         
         if let reader = StreamReader(path: file) {
             while let line = reader.nextLine() {
+                if line == "choice AA" {
+                    let _ = 34
+                }
                 if line == "" || line.dropFirst()!.containsString("#") {}
                 else if leftPanel {
                     print("In Left Panel")
@@ -124,6 +127,9 @@ class Reader {
                         else {
                             currentChoice.decision.allowMoney = false
                         }
+                    }
+                    else if line.wordAtIndex(0) == "rep" {
+                        currentChoice.decision.leftReputation = Int(line.wordAtIndex(1)!)
                     }
                     else if line.wordAtIndex(0) == "moneyEarned" {
                         let moneyEarned = Double(line.wordAtIndex(1)!)
@@ -174,11 +180,6 @@ class Reader {
                         rightPanel = false
                     }
                 }
-                else if contentTrue {
-                    print("In Content True")
-                    currentChoice.content = Content(text: line)
-                    contentTrue = false
-                }
                 else if decisionTrue {
                     print("In Decision True")
                     let indicator = line
@@ -205,13 +206,15 @@ class Reader {
                         currentChoice = choices[line.wordAtIndex(1)!]
                         print("Current Choice: \(line.wordAtIndex(1))")
                         print("")
+                        if currentChoice.identifier == "AA" {
+                            currentChoice.identifier = "AA"
+                        }
                     }
                     else if (line.wordAtIndex(0) == "year") {
                         currentChoice.year = Int(line.wordAtIndex(1)!)!
                     }
                     else if (line.wordAtIndex(0) == "content") {
-                        print("In Content")
-                        contentTrue = true
+                        currentChoice.content = Content(text: line.dropFirst()!)
                     }
                     else if (line == "decision") {
                         decisionTrue = true

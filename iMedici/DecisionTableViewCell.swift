@@ -29,14 +29,16 @@ class DecisionTableViewCell: UITableViewCell, UITextFieldDelegate {
         // Configure the view for the selected state
     }
 
-    @IBAction func makeDecisionTapped(sender: UIButton) {
-        
-    }
+
     @IBAction func rightChosen(sender: UIButton) {
         print("You Chosen Right!")
+        rightPanel.backgroundColor = UIColor.blueColor()
+        sender.backgroundColor = UIColor.blueColor()
     }
     
     @IBAction func leftChosen(sender: UIButton) {
         print("You Chosen Left!")
+        leftPanel.backgroundColor = UIColor.blueColor()
+        sender.backgroundColor = UIColor.blueColor()
     }
 }

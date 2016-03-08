@@ -31,7 +31,7 @@ class Decision: NSObject, NSCoding{
         leftImage = nil
         leftText = nil
         leftBulletPoints = nil
-        cost = nil
+        cost = 0
         leftReputation = 0
         //right
         rightImage = nil

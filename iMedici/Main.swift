@@ -92,16 +92,19 @@ class Main {
             decisionSection.leftPanel.text! += decision.leftText!
             decisionSection.leftPanel.text! += "\n"
         }
-        if decision.rightBulletPointsTrue() {
+        if decision.leftBulletPointsTrue() {
             for bullet in decision.leftBulletPoints! {
                 decisionSection.leftPanel.text! += bullet
                 decisionSection.leftPanel.text! += "\n"
             }
         }
-        if decision.cost != nil {
-            decisionSection.leftPanel.text! += "$"
-            decisionSection.leftPanel.text! +=  "\(decision.cost!)"
-            decisionSection.leftPanel.text! += "\n"
+        if decision.cost != nil{
+            if decision.cost == 0 {}
+            else {
+                decisionSection.leftPanel.text! += "$"
+                decisionSection.leftPanel.text! +=  "\(decision.cost!)"
+                decisionSection.leftPanel.text! += "\n"
+            }
         }
         decisionSection.leftPanel.textColor = UIColor.whiteColor()
         decisionSection.leftPanel.font = UIFont(name: "Futura", size: 14)
@@ -115,7 +118,9 @@ class Main {
     func moveRight() {
         if currentChoice?.major != 0 {}
         else {
-            money += (currentChoice?.decision.moneyEarned)!
+            if ((currentChoice?.decision.allowMoney)! == true) {
+                money += (currentChoice?.decision.moneyEarned)!
+            }
             currentChoice = story.choices[(currentChoice?.right)!]
             reputation -= 1
         }
