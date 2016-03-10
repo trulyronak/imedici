@@ -1,0 +1,310 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15A284" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="dcH-AV-AT4">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="Ffp-xo-P3I">
+            <objects>
+                <viewController id="rOH-8D-6DR" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="97j-P9-BeH"/>
+                        <viewControllerLayoutGuide type="bottom" id="Kk8-A0-MYT"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="85H-Ra-IV7">
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" editable="NO" textAlignment="center" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cQd-Cg-rJM" customClass="GradientTextView" customModule="iMedici" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="startColor">
+                                        <color key="value" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="endColor">
+                                        <color key="value" red="0.070588235294117646" green="0.039215686274509803" blue="0.5607843137254902" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="roundness">
+                                        <real key="value" value="12"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="cQd-Cg-rJM" firstAttribute="leading" secondItem="85H-Ra-IV7" secondAttribute="leadingMargin" constant="10" id="0Yq-bb-roH"/>
+                            <constraint firstItem="cQd-Cg-rJM" firstAttribute="centerY" secondItem="85H-Ra-IV7" secondAttribute="centerY" id="Rqz-eY-ReV"/>
+                            <constraint firstItem="cQd-Cg-rJM" firstAttribute="centerX" secondItem="85H-Ra-IV7" secondAttribute="centerX" id="WRg-rS-Ywi"/>
+                            <constraint firstItem="cQd-Cg-rJM" firstAttribute="top" secondItem="97j-P9-BeH" secondAttribute="bottom" constant="188" id="sMf-Ch-12M"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="cQd-Cg-rJM"/>
+                            </mask>
+                            <mask key="constraints">
+                                <exclude reference="0Yq-bb-roH"/>
+                                <exclude reference="Rqz-eY-ReV"/>
+                                <exclude reference="WRg-rS-Ywi"/>
+                                <exclude reference="sMf-Ch-12M"/>
+                            </mask>
+                        </variation>
+                        <variation key="widthClass=compact">
+                            <mask key="subviews">
+                                <include reference="cQd-Cg-rJM"/>
+                            </mask>
+                            <mask key="constraints">
+                                <include reference="0Yq-bb-roH"/>
+                                <include reference="Rqz-eY-ReV"/>
+                                <include reference="WRg-rS-Ywi"/>
+                                <include reference="sMf-Ch-12M"/>
+                            </mask>
+                        </variation>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cCk-aw-uT4" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="163.5" y="327"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="kWn-bl-FrC">
+            <objects>
+                <viewController id="dcH-AV-AT4" customClass="ViewController" customModule="iMedici" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Lb2-U9-fL6"/>
+                        <viewControllerLayoutGuide type="bottom" id="PE6-JI-6AU"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="2ZT-nZ-nOQ">
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="384" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="ova-JG-wzq">
+                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="decisionCell" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="decisionCell" rowHeight="384" id="YGg-BG-Tl6" customClass="DecisionTableViewCell" customModule="iMedici" customModuleProvider="target">
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="YGg-BG-Tl6" id="i97-PR-nid">
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="center" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EYJ-LW-4n1" customClass="GradientTextView" customModule="iMedici" customModuleProvider="target">
+                                                    <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                                    <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="87" id="976-na-f1O"/>
+                                                    </constraints>
+                                                    <string key="text">promptpromptpromptpromptpromptpromptpromptpromptpromptpromptpromptpromptpromptpromptpromptpromptpromptpromptpromptpromptpromptpromptpromptpromptpromptpromptpromptpromptpromptpromptpromptpromptpromptpromptpromptpromptpromptpromptpromptpromptpromptpromptpromptpromptpromptpromptpromptpromptpromptpromptpromptpromptpromptpromptpromptpromptpromptpromptpromptpromptpromptpromptpromptpromptpromptpromptpromptpromptpromptpromptpromptpromptpromptpromptpromptpromptprompt</string>
+                                                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="14"/>
+                                                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="color" keyPath="startColor">
+                                                            <color key="value" red="0.070588235289999995" green="0.039215686270000001" blue="0.56078431370000004" alpha="1" colorSpace="calibratedRGB"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="color" keyPath="endColor">
+                                                            <color key="value" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="roundness">
+                                                            <real key="value" value="12"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                    </userDefinedRuntimeAttributes>
+                                                    <variation key="default">
+                                                        <mask key="constraints">
+                                                            <exclude reference="976-na-f1O"/>
+                                                        </mask>
+                                                    </variation>
+                                                    <variation key="widthClass=compact">
+                                                        <mask key="constraints">
+                                                            <include reference="976-na-f1O"/>
+                                                        </mask>
+                                                    </variation>
+                                                </textView>
+                                                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="center" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="f88-5d-5Cg" customClass="GradientTextView" customModule="iMedici" customModuleProvider="target">
+                                                    <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                                    <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="188" id="tLa-aY-Eny"/>
+                                                    </constraints>
+                                                    <mutableString key="text">leftleftleftleftleftleftleftleftleftleftleftleftleftleftleftleftleftleftleftleftleftleftleftleftleftleftleftleftleftleftleftleftleftleftleftleftleftleftleftleftleftleftleftleftleftleftleftleftleftleftleftleftleftleftleftleftleftleftleftleftleftleftleftleftleftleftleftleftleftleftleftleftleftleftleftleftleftleftleftleftleftleftleftleftleftleftleftleftleftleftleftleftleftleftleftleftleftleftleftleftleftleftleftleftleftleftleftleftleftleftleftleftleftleftleftleftleftleftleftleftleftleftleftleftleftleftleftleftleftleftleftleftleftleftleftleftleftleftleftleftleftleftleftleftleftleftleftleftleftleftleftleftleftleftleftleftleftleftleftleftleftleft</mutableString>
+                                                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="14"/>
+                                                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="color" keyPath="startColor">
+                                                            <color key="value" red="0.070588235289999995" green="0.039215686270000001" blue="0.56078431370000004" alpha="1" colorSpace="calibratedRGB"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="color" keyPath="endColor">
+                                                            <color key="value" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="roundness">
+                                                            <real key="value" value="12"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                    </userDefinedRuntimeAttributes>
+                                                    <variation key="default">
+                                                        <mask key="constraints">
+                                                            <exclude reference="tLa-aY-Eny"/>
+                                                        </mask>
+                                                    </variation>
+                                                    <variation key="widthClass=compact">
+                                                        <mask key="constraints">
+                                                            <include reference="tLa-aY-Eny"/>
+                                                        </mask>
+                                                    </variation>
+                                                </textView>
+                                                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="center" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Cdc-Ww-P1N" customClass="GradientTextView" customModule="iMedici" customModuleProvider="target">
+                                                    <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                                    <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <mutableString key="text">rightrightrightrightrightrightrightrightrightrightrightrightrightrightrightrightrightrightrightrightrightrightrightrightrightrightrightrightrightrightrightrightrightrightrightrightrightrightrightrightrightrightrightrightrightrightrightrightrightrightrightrightrightrightrightrightrightrightrightrightrightrightrightrightrightrightrightrightrightrightrightrightrightrightrightrightrightrightrightrightrightrightrightrightrightrightrightrightrightrightrightrightrightrightrightrightrightrightrightrightrightrightrightrightrightrightrightrightrightrightrightrightrightrightrightrightrightrightrightrightrightrightrightrightrightrightrightrightrightrightrightrightrightrightrightrightrightrightrightright</mutableString>
+                                                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="14"/>
+                                                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="color" keyPath="startColor">
+                                                            <color key="value" red="0.070588235289999995" green="0.039215686270000001" blue="0.56078431370000004" alpha="1" colorSpace="calibratedRGB"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="color" keyPath="endColor">
+                                                            <color key="value" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="roundness">
+                                                            <real key="value" value="12"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                    </userDefinedRuntimeAttributes>
+                                                </textView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="Cdc-Ww-P1N" firstAttribute="trailing" secondItem="i97-PR-nid" secondAttribute="trailingMargin" id="089-bm-64T"/>
+                                                <constraint firstItem="EYJ-LW-4n1" firstAttribute="top" secondItem="i97-PR-nid" secondAttribute="topMargin" id="AQ8-xi-c6o"/>
+                                                <constraint firstItem="f88-5d-5Cg" firstAttribute="leading" secondItem="EYJ-LW-4n1" secondAttribute="leading" id="XLY-Kh-ymk"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="f88-5d-5Cg" secondAttribute="bottom" constant="-7" id="Z6E-qa-4Oi"/>
+                                                <constraint firstItem="f88-5d-5Cg" firstAttribute="top" secondItem="EYJ-LW-4n1" secondAttribute="bottom" constant="8" symbolic="YES" id="joq-Nn-y8G"/>
+                                                <constraint firstItem="EYJ-LW-4n1" firstAttribute="leading" secondItem="i97-PR-nid" secondAttribute="leadingMargin" id="oWR-Q7-uSa"/>
+                                                <constraint firstItem="f88-5d-5Cg" firstAttribute="top" secondItem="Cdc-Ww-P1N" secondAttribute="top" id="tjv-nS-R6s"/>
+                                                <constraint firstItem="Cdc-Ww-P1N" firstAttribute="leading" secondItem="f88-5d-5Cg" secondAttribute="trailing" constant="8" symbolic="YES" id="x8J-OC-q6s"/>
+                                                <constraint firstItem="EYJ-LW-4n1" firstAttribute="trailing" secondItem="Cdc-Ww-P1N" secondAttribute="trailing" id="zA6-vm-Xvk"/>
+                                                <constraint firstItem="f88-5d-5Cg" firstAttribute="bottom" secondItem="Cdc-Ww-P1N" secondAttribute="bottom" id="zyd-Xw-Yep"/>
+                                            </constraints>
+                                            <variation key="default">
+                                                <mask key="subviews">
+                                                    <exclude reference="EYJ-LW-4n1"/>
+                                                    <exclude reference="f88-5d-5Cg"/>
+                                                    <exclude reference="Cdc-Ww-P1N"/>
+                                                </mask>
+                                                <mask key="constraints">
+                                                    <exclude reference="AQ8-xi-c6o"/>
+                                                    <exclude reference="oWR-Q7-uSa"/>
+                                                    <exclude reference="zA6-vm-Xvk"/>
+                                                    <exclude reference="XLY-Kh-ymk"/>
+                                                    <exclude reference="Z6E-qa-4Oi"/>
+                                                    <exclude reference="joq-Nn-y8G"/>
+                                                    <exclude reference="tjv-nS-R6s"/>
+                                                    <exclude reference="zyd-Xw-Yep"/>
+                                                    <exclude reference="089-bm-64T"/>
+                                                    <exclude reference="x8J-OC-q6s"/>
+                                                </mask>
+                                            </variation>
+                                            <variation key="widthClass=compact">
+                                                <mask key="subviews">
+                                                    <include reference="EYJ-LW-4n1"/>
+                                                    <include reference="f88-5d-5Cg"/>
+                                                    <include reference="Cdc-Ww-P1N"/>
+                                                </mask>
+                                                <mask key="constraints">
+                                                    <include reference="AQ8-xi-c6o"/>
+                                                    <include reference="oWR-Q7-uSa"/>
+                                                    <include reference="zA6-vm-Xvk"/>
+                                                    <include reference="XLY-Kh-ymk"/>
+                                                    <include reference="Z6E-qa-4Oi"/>
+                                                    <include reference="joq-Nn-y8G"/>
+                                                    <include reference="tjv-nS-R6s"/>
+                                                    <include reference="zyd-Xw-Yep"/>
+                                                    <include reference="089-bm-64T"/>
+                                                    <include reference="x8J-OC-q6s"/>
+                                                </mask>
+                                            </variation>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="leftPanel" destination="f88-5d-5Cg" id="MLl-uP-2nR"/>
+                                            <outlet property="prompt" destination="EYJ-LW-4n1" id="jpb-M0-34p"/>
+                                            <outlet property="rightPanel" destination="Cdc-Ww-P1N" id="Z6e-qg-S0t"/>
+                                        </connections>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="contentCell" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="contentCell" rowHeight="96" id="4HG-0e-F00" customClass="ContentTableViewCell" customModule="iMedici" customModuleProvider="target">
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="4HG-0e-F00" id="CEq-ha-CXT">
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="center" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xj6-Yp-iF0" customClass="GradientTextView" customModule="iMedici" customModuleProvider="target">
+                                                    <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                                    <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <string key="text">contentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontent</string>
+                                                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="14"/>
+                                                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="color" keyPath="startColor">
+                                                            <color key="value" red="0.070588235289999995" green="0.039215686270000001" blue="0.56078431370000004" alpha="1" colorSpace="calibratedRGB"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="color" keyPath="endColor">
+                                                            <color key="value" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="roundness">
+                                                            <real key="value" value="12"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                    </userDefinedRuntimeAttributes>
+                                                    <variation key="widthClass=compact" fixedFrame="YES">
+                                                        <rect key="frame" x="8" y="8" width="384" height="87"/>
+                                                    </variation>
+                                                </textView>
+                                            </subviews>
+                                            <variation key="default">
+                                                <mask key="subviews">
+                                                    <exclude reference="Xj6-Yp-iF0"/>
+                                                </mask>
+                                            </variation>
+                                            <variation key="widthClass=compact">
+                                                <mask key="subviews">
+                                                    <include reference="Xj6-Yp-iF0"/>
+                                                </mask>
+                                            </variation>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="contentTextView" destination="Xj6-Yp-iF0" id="Ghx-h5-TBl"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="0.0" y="0.0" width="400" height="533"/>
+                                </variation>
+                                <connections>
+                                    <outlet property="dataSource" destination="dcH-AV-AT4" id="EUo-Ow-AeW"/>
+                                    <outlet property="delegate" destination="dcH-AV-AT4" id="HAv-n7-net"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="ova-JG-wzq"/>
+                            </mask>
+                        </variation>
+                        <variation key="widthClass=compact">
+                            <mask key="subviews">
+                                <include reference="ova-JG-wzq"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <connections>
+                        <outlet property="tableView" destination="ova-JG-wzq" id="OL1-ok-CF9"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="n7n-yC-xXA" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1062" y="122"/>
+        </scene>
+    </scenes>
+</document>

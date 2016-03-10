@@ -18,22 +18,32 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     //demo, will remove later
     var decision = false
     
+    override func prefersStatusBarHidden() -> Bool {
+        return true
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        /*
         cells = [UITableViewCell]()
         game = Main()
+        */
+        tableView.estimatedRowHeight = 96;
+        tableView.rowHeight = UITableViewAutomaticDimension;
     }
     
     override func viewDidAppear(animated: Bool) {
         loadCells()
         tableView.reloadData()
-    }
+        let lastIndex = NSIndexPath(forRow: 1, inSection: 0)
+        self.tableView.scrollToRowAtIndexPath(lastIndex, atScrollPosition: UITableViewScrollPosition.Bottom, animated: true)    }
     
     func loadCells() {
-        let newCells = game.getCurrentBlock(tableView)
+        /*let newCells = game.getCurrentBlock(tableView)
         cells.appendContentsOf(newCells)
         updateUI()
         tableView.reloadData()
+        */
     }
     
     override func didReceiveMemoryWarning() {
@@ -42,28 +52,41 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     }
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return cells.count
+        return 2
     }
     
+    /*
     func updateUI() {
-        moneyLabel.text = String(game.money)
-        if let year = game.currentChoice?.year {
-            yearLabel.text = String(year)
-        }
+    moneyLabel.text = String(game.money)
+    if let year = game.currentChoice?.year {
+    yearLabel.text = String(year)
     }
-    
+    }
+    */
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        if decision {
-            tableView.rowHeight = 347
+        if !decision {
+            let cell = tableView.dequeueReusableCellWithIdentifier("contentCell") as! ContentTableViewCell
+            cell.selectionStyle = .None
+            decision = true
+            tableView.estimatedRowHeight = 96;
+            cell.contentTextView.text = "contentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontent"
+            
+            return cell
+
         }
-        else{
-            tableView.rowHeight = 80
+        else {
+            let cell = tableView.dequeueReusableCellWithIdentifier("decisionCell") as! DecisionTableViewCell
+            cell.selectionStyle = .None
+            tableView.estimatedRowHeight = 384;
+            cell.rightPanel.text = "rightrightrightrightrightrightrightrightrightrightrightrightrightrightrightrightrightrightrightrightrightrightrightrightrightrightrightrightrightrightrightrightrightrightrightrightrightrightrightrightrightrightrightrightrightrightrightrightrightrightrightrightrightrightrightrightrightrightrightrightrightrightrightrightrightrightrightrightrightrightrightrightrightrightrightrightrightrightrightrightrightrightrightrightrightrightrightrightrightrightrightrightrightrightrightrightrightrightrightrightrightrightrightrightrightrightrightrightrightrightrightrightrightrightrightrightrightrightrightrightrightrightrightrightrightrightrightrightrightrightrightrightrightrightrightrightrightrightrightright"
+            cell.leftPanel.text = "leftleftleftleftleftleftleftleftleftleftleftleftleftleftleftleftleftleftleftleftleftleftleftleftleftleftleftleftleftleftleftleftleftleftleftleftleftleftleftleftleftleftleftleftleftleftleftleftleftleftleftleftleftleftleftleftleftleftleftleftleftleftleftleftleftleftleftleftleftleftleftleftleftleftleftleftleftleftleftleftleftleftleftleftleftleftleftleftleftleftleftleftleftleftleftleftleftleftleftleftleftleftleftleftleftleftleftleftleftleftleftleftleftleftleftleftleftleftleftleftleftleftleftleftleftleftleftleftleftleftleftleftleftleftleftleftleftleftleftleftleftleftleftleftleftleftleftleftleftleftleftleftleftleftleftleftleftleftleftleftleftleft"
+            cell.prompt.text = "promptpromptpromptpromptpromptpromptpromptpromptpromptpromptpromptpromptpromptpromptpromptpromptpromptpromptpromptpromptpromptpromptpromptpromptpromptpromptpromptpromptpromptpromptpromptpromptpromptpromptpromptpromptpromptpromptpromptpromptpromptpromptpromptpromptpromptpromptpromptpromptpromptpromptpromptpromptpromptpromptpromptpromptpromptpromptpromptpromptpromptpromptpromptpromptpromptpromptpromptpromptpromptpromptpromptpromptpromptpromptpromptpromptprompt"
+            decision = false
+            return cell
+
         }
-        decision = !decision
-        let cell = cells[indexPath.row]
         //cell.selectionStyle = UITableViewCellSelectionStyle.None
         
-        return cell
     }
     
     @IBAction func rightChosen(sender: UIButton) {
@@ -71,8 +94,8 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         game.moveRight()
         loadCells()
         sender.removeTarget(nil, action: nil, forControlEvents: .AllEvents)
-
-
+        
+        
     }
     
     @IBAction func leftChosen(sender: UIButton) {
@@ -80,6 +103,6 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         print("You Chosen Left!")
         game.moveLeft()
         loadCells()
-           }
+    }
 }
 

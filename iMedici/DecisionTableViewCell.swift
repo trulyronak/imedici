@@ -28,6 +28,13 @@ class DecisionTableViewCell: UITableViewCell, UITextFieldDelegate {
         //nothing for now
         // Configure the view for the selected state
     }
+    
+    override func prepareForReuse() {
+        super.prepareForReuse()
+        prompt.text = ""
+        leftPanel.text = ""
+        rightPanel.text = ""
+    }
 
 
     @IBAction func rightChosen(sender: UIButton) {

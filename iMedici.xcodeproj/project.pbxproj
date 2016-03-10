@@ -13,7 +13,6 @@
 		A6426A5C1C619C9D00B002E7 /* DecisionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6426A5B1C619C9D00B002E7 /* DecisionTableViewCell.swift */; };
 		A6655C761C6003AE0009D8FF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6655C751C6003AE0009D8FF /* AppDelegate.swift */; };
 		A6655C781C6003AE0009D8FF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6655C771C6003AE0009D8FF /* ViewController.swift */; };
-		A6655C7B1C6003AE0009D8FF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A6655C791C6003AE0009D8FF /* Main.storyboard */; };
 		A6655C7D1C6003AE0009D8FF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A6655C7C1C6003AE0009D8FF /* Assets.xcassets */; };
 		A6655C801C6003AE0009D8FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A6655C7E1C6003AE0009D8FF /* LaunchScreen.storyboard */; };
 		A6655C8B1C6003AE0009D8FF /* iMediciTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6655C8A1C6003AE0009D8FF /* iMediciTests.swift */; };
@@ -24,10 +23,15 @@
 		A694D3EC1C654AEC00DC91A8 /* Choice.swift in Sources */ = {isa = PBXBuildFile; fileRef = A694D3EB1C654AEC00DC91A8 /* Choice.swift */; };
 		A694D3EE1C654C4800DC91A8 /* Decision.swift in Sources */ = {isa = PBXBuildFile; fileRef = A694D3ED1C654C4800DC91A8 /* Decision.swift */; };
 		A6959EDF1C6D374300284EB0 /* Content.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6959EDE1C6D374300284EB0 /* Content.swift */; };
+		A69DC3841C91169100869A28 /* GradientTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A69DC3831C91169100869A28 /* GradientTextView.swift */; };
+		A69DC3861C91175900869A28 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A69DC3851C91175900869A28 /* QuartzCore.framework */; };
+		A69DC3881C911AFB00869A28 /* GradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A69DC3871C911AFB00869A28 /* GradientView.swift */; };
+		A69DC38A1C911BE400869A28 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A69DC3891C911BE400869A28 /* MainViewController.swift */; };
 		A6BFBD611C6A83EF00590E9A /* StreamReader.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6BFBD601C6A83EF00590E9A /* StreamReader.swift */; };
 		A6BFBD631C6A8F3A00590E9A /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6BFBD621C6A8F3A00590E9A /* Extensions.swift */; };
 		A6C5E8E31C8F6AF7002FA77F /* SingleChoiceDecisionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6C5E8E11C8F6AF7002FA77F /* SingleChoiceDecisionTableViewCell.swift */; };
 		A6C5E8E41C8F6AF7002FA77F /* SingleChoiceDecisionTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A6C5E8E21C8F6AF7002FA77F /* SingleChoiceDecisionTableViewCell.xib */; };
+		A6C5E8E61C8F74F6002FA77F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A6C5E8E51C8F74F6002FA77F /* Main.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,7 +59,6 @@
 		A6655C721C6003AE0009D8FF /* iMedici.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iMedici.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A6655C751C6003AE0009D8FF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A6655C771C6003AE0009D8FF /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		A6655C7A1C6003AE0009D8FF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		A6655C7C1C6003AE0009D8FF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A6655C7F1C6003AE0009D8FF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A6655C811C6003AE0009D8FF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -71,10 +74,15 @@
 		A694D3EB1C654AEC00DC91A8 /* Choice.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Choice.swift; sourceTree = "<group>"; };
 		A694D3ED1C654C4800DC91A8 /* Decision.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Decision.swift; sourceTree = "<group>"; };
 		A6959EDE1C6D374300284EB0 /* Content.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Content.swift; sourceTree = "<group>"; };
+		A69DC3831C91169100869A28 /* GradientTextView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GradientTextView.swift; sourceTree = "<group>"; };
+		A69DC3851C91175900869A28 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		A69DC3871C911AFB00869A28 /* GradientView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GradientView.swift; sourceTree = "<group>"; };
+		A69DC3891C911BE400869A28 /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		A6BFBD601C6A83EF00590E9A /* StreamReader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StreamReader.swift; sourceTree = "<group>"; };
 		A6BFBD621C6A8F3A00590E9A /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		A6C5E8E11C8F6AF7002FA77F /* SingleChoiceDecisionTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SingleChoiceDecisionTableViewCell.swift; path = ../SingleChoiceDecisionTableViewCell.swift; sourceTree = "<group>"; };
 		A6C5E8E21C8F6AF7002FA77F /* SingleChoiceDecisionTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = SingleChoiceDecisionTableViewCell.xib; path = ../SingleChoiceDecisionTableViewCell.xib; sourceTree = "<group>"; };
+		A6C5E8E51C8F74F6002FA77F /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,6 +90,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A69DC3861C91175900869A28 /* QuartzCore.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -117,6 +126,8 @@
 				A6D95BB11C63FD4C00885725 /* Storyboards */,
 				A6D95BAE1C63FCC900885725 /* ViewControllers */,
 				A6426A581C619C5A00B002E7 /* TableViewCells */,
+				A69DC3831C91169100869A28 /* GradientTextView.swift */,
+				A69DC3871C911AFB00869A28 /* GradientView.swift */,
 			);
 			name = UI;
 			sourceTree = "<group>";
@@ -135,6 +146,7 @@
 		A6655C691C6003AE0009D8FF = {
 			isa = PBXGroup;
 			children = (
+				A69DC3851C91175900869A28 /* QuartzCore.framework */,
 				A6655C741C6003AE0009D8FF /* iMedici */,
 				A6655C891C6003AE0009D8FF /* iMediciTests */,
 				A6655C941C6003AE0009D8FF /* iMediciUITests */,
@@ -215,6 +227,7 @@
 			isa = PBXGroup;
 			children = (
 				A6655C771C6003AE0009D8FF /* ViewController.swift */,
+				A69DC3891C911BE400869A28 /* MainViewController.swift */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -233,8 +246,8 @@
 		A6D95BB11C63FD4C00885725 /* Storyboards */ = {
 			isa = PBXGroup;
 			children = (
-				A6655C791C6003AE0009D8FF /* Main.storyboard */,
 				A6655C7E1C6003AE0009D8FF /* LaunchScreen.storyboard */,
+				A6C5E8E51C8F74F6002FA77F /* Main.storyboard */,
 			);
 			name = Storyboards;
 			sourceTree = "<group>";
@@ -346,9 +359,9 @@
 				A6655C801C6003AE0009D8FF /* LaunchScreen.storyboard in Resources */,
 				A6655C7D1C6003AE0009D8FF /* Assets.xcassets in Resources */,
 				A6C5E8E41C8F6AF7002FA77F /* SingleChoiceDecisionTableViewCell.xib in Resources */,
+				A6C5E8E61C8F74F6002FA77F /* Main.storyboard in Resources */,
 				A694D3E91C65498600DC91A8 /* ChoiceContent.txt in Resources */,
 				A694D3E71C6548A800DC91A8 /* ChoiceTree.txt in Resources */,
-				A6655C7B1C6003AE0009D8FF /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -375,10 +388,12 @@
 			files = (
 				A6235F211C65D12200C2E5E0 /* Reader.swift in Sources */,
 				A6655C781C6003AE0009D8FF /* ViewController.swift in Sources */,
+				A69DC3881C911AFB00869A28 /* GradientView.swift in Sources */,
 				A694D3EC1C654AEC00DC91A8 /* Choice.swift in Sources */,
 				A6959EDF1C6D374300284EB0 /* Content.swift in Sources */,
 				A6BFBD611C6A83EF00590E9A /* StreamReader.swift in Sources */,
 				A6655C761C6003AE0009D8FF /* AppDelegate.swift in Sources */,
+				A69DC38A1C911BE400869A28 /* MainViewController.swift in Sources */,
 				A693A5AC1C79695900B84628 /* Main.swift in Sources */,
 				A6BFBD631C6A8F3A00590E9A /* Extensions.swift in Sources */,
 				A6C5E8E31C8F6AF7002FA77F /* SingleChoiceDecisionTableViewCell.swift in Sources */,
@@ -386,6 +401,7 @@
 				A6426A5A1C619C7E00B002E7 /* ContentTableViewCell.swift in Sources */,
 				A6426A5C1C619C9D00B002E7 /* DecisionTableViewCell.swift in Sources */,
 				A694D3EE1C654C4800DC91A8 /* Decision.swift in Sources */,
+				A69DC3841C91169100869A28 /* GradientTextView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -421,14 +437,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		A6655C791C6003AE0009D8FF /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				A6655C7A1C6003AE0009D8FF /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		A6655C7E1C6003AE0009D8FF /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (

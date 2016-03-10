@@ -27,4 +27,8 @@ class ContentTableViewCell: UITableViewCell {
         // Configure the view for the selected state
     }
 
+    override func prepareForReuse() {
+        super.prepareForReuse()
+        contentTextView.text = ""
+    }
 }
