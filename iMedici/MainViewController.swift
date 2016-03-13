@@ -22,8 +22,8 @@ class MainViewController: UIViewController, UITableViewDelegate, UITableViewData
         super.viewDidLoad()
         cells = [UITableViewCell]()
         game = Main()
-        tableView.estimatedRowHeight = 150;
         tableView.rowHeight = UITableViewAutomaticDimension;
+        tableView.estimatedRowHeight = 150;
     }
     
     override func viewDidAppear(animated: Bool) {
@@ -32,10 +32,10 @@ class MainViewController: UIViewController, UITableViewDelegate, UITableViewData
     }
     
     func loadCells() {
-        let newCells = game.getCurrentBlock(tableView)
-        cells.appendContentsOf(newCells)
-        updateUI()
-        tableView.reloadData()
+//        let newCells = game.getCurrentBlock(self)
+//        cells.appendContentsOf(newCells)
+//        updateUI()
+//        tableView.reloadData()
     }
     
     override func didReceiveMemoryWarning() {

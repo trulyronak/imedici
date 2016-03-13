@@ -9,7 +9,7 @@
 import UIKit
 
 class DecisionTableViewCell: UITableViewCell, UITextFieldDelegate {
-
+    
     @IBOutlet var prompt: UITextView!
     @IBOutlet var leftPanel: UITextView!
     @IBOutlet var rightPanel: UITextView!
@@ -22,7 +22,7 @@ class DecisionTableViewCell: UITableViewCell, UITextFieldDelegate {
         leftPanel.tag = 0
         rightPanel.tag = 1
     }
-
+    
     override func setSelected(selected: Bool, animated: Bool) {
         //super.setSelected(selected, animated: animated)
         //nothing for now
@@ -35,17 +35,19 @@ class DecisionTableViewCell: UITableViewCell, UITextFieldDelegate {
         leftPanel.text = ""
         rightPanel.text = ""
     }
-
-
+    
+    
     @IBAction func rightChosen(sender: UIButton) {
         print("You Chosen Right!")
         rightPanel.backgroundColor = UIColor.blueColor()
         sender.backgroundColor = UIColor.blueColor()
+        game.moveRight()
     }
     
     @IBAction func leftChosen(sender: UIButton) {
         print("You Chosen Left!")
         leftPanel.backgroundColor = UIColor.blueColor()
         sender.backgroundColor = UIColor.blueColor()
+        game.moveLeft()
     }
 }

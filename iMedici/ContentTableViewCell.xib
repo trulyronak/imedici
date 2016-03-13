@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9531" systemVersion="15A284" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="contentCell" selectionStyle="default" indentationWidth="10" reuseIdentifier="contentCell" rowHeight="170" id="yRl-m0-lOK" customClass="ContentTableViewCell" customModule="iMedici" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="400" height="170"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="yRl-m0-lOK" id="kD7-1L-pxx">
+                <rect key="frame" x="0.0" y="0.0" width="400" height="169"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="center" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eT2-mZ-Kb8">
+                        <rect key="frame" x="8" y="9" width="384" height="160"/>
+                        <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                        <color key="textColor" red="0.070588235289999995" green="0.039215686270000001" blue="0.56078431370000004" alpha="1" colorSpace="calibratedRGB"/>
+                        <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="14"/>
+                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                    </textView>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="eT2-mZ-Kb8" firstAttribute="centerX" secondItem="kD7-1L-pxx" secondAttribute="centerX" id="GZz-Im-g79"/>
+                    <constraint firstItem="eT2-mZ-Kb8" firstAttribute="leading" secondItem="kD7-1L-pxx" secondAttribute="leadingMargin" id="W1v-lg-SMc"/>
+                    <constraint firstItem="eT2-mZ-Kb8" firstAttribute="top" secondItem="kD7-1L-pxx" secondAttribute="topMargin" constant="1" id="oML-UB-nip"/>
+                    <constraint firstAttribute="bottom" secondItem="eT2-mZ-Kb8" secondAttribute="bottom" id="uHI-fd-FZd"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="contentTextView" destination="eT2-mZ-Kb8" id="8Es-7I-f2G"/>
+            </connections>
+            <point key="canvasLocation" x="403" y="212"/>
+        </tableViewCell>
+    </objects>
+</document>

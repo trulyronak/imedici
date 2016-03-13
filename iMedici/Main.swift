@@ -15,6 +15,7 @@ class Main {
     var story: StoryHandler!
     var reputation: Int
     var money: Double
+    var VC: MainTableViewController!
     
     init(){
         //start game
@@ -27,17 +28,23 @@ class Main {
     }
     
     //TODO: Figure out why prompt is not loading
-    func getCurrentBlock(tableView: UITableView) -> [UITableViewCell]! {
+    func getCurrentBlock(tableViewController: MainTableViewController) -> [UITableViewCell]! {
+        let tableView = tableViewController.tableView
+        VC = tableViewController
         var block = [UITableViewCell]()
         
         //content
         let content = currentChoice?.content
         
+        //let contentSectionWrapped = tableView.dequeueReusableCellWithIdentifier("contentCell") as? ContentTableViewCell
+        tableView.registerNib(UINib(nibName: "ContentTableViewCell", bundle: nil), forCellReuseIdentifier: "contentCell")
         let contentSection = tableView.dequeueReusableCellWithIdentifier("contentCell") as! ContentTableViewCell
+        
         contentSection.identifier = currentChoice?.identifier
         contentSection.contentTextView.text = content?.text
         contentSection.contentTextView.textColor = UIColor.whiteColor()
         contentSection.contentTextView.font = UIFont(name: "Futura", size: 14)
+        contentSection.contentTextView.frame = CGRectMake(8, 9, 384, 320)
         contentSection.frame = CGRectMake(38, 0, 324, 72)
         block.append(contentSection)
         if currentChoice?.identifier == "INTRO" {
@@ -46,6 +53,7 @@ class Main {
         
         //decision
         let decision: Decision = (currentChoice?.decision)!
+        tableView.registerNib(UINib(nibName: "DecisionTableViewCell", bundle: nil), forCellReuseIdentifier: "decisionCell")
         let decisionSection = tableView.dequeueReusableCellWithIdentifier("decisionCell") as! DecisionTableViewCell
         decisionSection.identifier = currentChoice?.identifier
         decisionSection.rightPanel.text = ""
@@ -124,6 +132,7 @@ class Main {
             currentChoice = story.choices[(currentChoice?.right)!]
             reputation -= 1
         }
+        VC.loadCells()
     }
     func moveLeft() {
         if currentChoice?.major != 0 {}
@@ -132,5 +141,6 @@ class Main {
             reputation += (currentChoice?.decision.leftReputation)!
             currentChoice = story.choices[(currentChoice?.left)!]
         }
+        VC.loadCells()
     }
 }
