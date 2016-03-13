@@ -14,13 +14,17 @@ class DecisionTableViewCell: UITableViewCell, UITextFieldDelegate {
     @IBOutlet var leftPanel: UITextView!
     @IBOutlet var rightPanel: UITextView!
     
+    var originalColor: UIColor!
     var identifier: String!
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
-        
+        originalColor = leftPanel.backgroundColor
         leftPanel.tag = 0
         rightPanel.tag = 1
+        leftPanel.backgroundColor = originalColor
+        rightPanel.backgroundColor = originalColor
+
     }
     
     override func setSelected(selected: Bool, animated: Bool) {
@@ -40,6 +44,7 @@ class DecisionTableViewCell: UITableViewCell, UITextFieldDelegate {
     @IBAction func rightChosen(sender: UIButton) {
         print("You Chosen Right!")
         rightPanel.backgroundColor = UIColor.blueColor()
+        leftPanel.backgroundColor = originalColor
         sender.backgroundColor = UIColor.blueColor()
         game.moveRight()
     }
@@ -47,6 +52,7 @@ class DecisionTableViewCell: UITableViewCell, UITextFieldDelegate {
     @IBAction func leftChosen(sender: UIButton) {
         print("You Chosen Left!")
         leftPanel.backgroundColor = UIColor.blueColor()
+        rightPanel.backgroundColor = originalColor
         sender.backgroundColor = UIColor.blueColor()
         game.moveLeft()
     }

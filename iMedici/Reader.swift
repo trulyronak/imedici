@@ -228,6 +228,34 @@ class Reader {
             defer {
                 reader.close()
             }
+            /*
+            for choice in choices.values {
+                do {
+                    
+                    print("")
+                    print("Choice \(choice.identifier)")
+                    print("Choice Content")
+                    print(choice.content.text)
+                    print("Choice Decision:")
+                    print(choice.decision.prompt)
+                    
+                    print("Left Panel")
+                    print(choice.decision.leftText)
+                    print(choice.decision.leftBulletPoints)
+                    print(choice.decision.leftImage)
+                    print(choice.decision.cost)
+                    print("Right Panel")
+                    print(choice.decision.rightText)
+                    print(choice.decision.rightBulletPoints)
+                    print(choice.decision.rightImage)
+                    print(choice.decision.moneyEarned)
+                    print("")
+                }
+                catch _ {
+                    print("TRUST ME")
+                }
+                
+            }*/
         }
         else {
             worked = false
@@ -443,6 +471,7 @@ class Reader {
             
             var toReturn: [Choice: [String: Choice]] = [Choice: [String: Choice]]()
             toReturn.updateValue(choices, forKey: choices[startChoice]!)
+            
             
             return toReturn
         }

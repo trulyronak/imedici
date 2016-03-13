@@ -6,24 +6,30 @@
 //  Copyright © 2016 Shah Industries. All rights reserved.
 //
 
+/*
+tableView.estimatedRowHeight = 150;
+tableView.rowHeight = UITableViewAutomaticDimension;
+*/
+
 import UIKit
 
 class MainTableViewController: UITableViewController {
 
     //MARK: - Variables
 
+    var bools: [String:Bool]!
     var cells: [UITableViewCell]!
     
-    var decision = false
 
     //MARK: - UIViewControler Methods
     
     override func viewDidLoad() {
+        bools = [String:Bool]()
         super.viewDidLoad()
         cells = [UITableViewCell]()
         game = Main()
-        tableView.estimatedRowHeight = 150;
-        tableView.rowHeight = UITableViewAutomaticDimension;
+        bools.updateValue(false, forKey: "decision")
+        bools.updateValue(true, forKey: "firstRun")
     }
 
     override func viewDidAppear(animated: Bool) {
@@ -41,17 +47,24 @@ class MainTableViewController: UITableViewController {
         return cells.count
     }
 
+    
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        if decision {
-            tableView.rowHeight = 347
+        let cell = cells[indexPath.row]
+
+        if bools["firstRun"] == true {
+            tableView.rowHeight = 380
+            bools.updateValue(false, forKey: "firstRun")
+        }
+        else if let _ = cell as? ContentTableViewCell{
+            tableView.rowHeight = 160
+
         }
         else{
-            tableView.rowHeight = 80
+            tableView.rowHeight = 380
+
         }
-        decision = !decision
-        let cell = cells[indexPath.row]
         //cell.selectionStyle = UITableViewCellSelectionStyle.None
-        
+
         return cell
     }
     
