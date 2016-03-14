@@ -10,8 +10,8 @@ import UIKit
 
 class SingleChoiceDecisionTableViewCell: UITableViewCell {
     @IBOutlet var prompt: UITextView!
-    @IBOutlet var panel: UITextView!
-    
+    @IBOutlet var rightPanel: UITextView!
+    var identifier:String!
     
     override func awakeFromNib() {
         super.awakeFromNib()

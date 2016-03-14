@@ -43,17 +43,17 @@ class DecisionTableViewCell: UITableViewCell, UITextFieldDelegate {
     
     @IBAction func rightChosen(sender: UIButton) {
         print("You Chosen Right!")
-        rightPanel.backgroundColor = UIColor.blueColor()
-        leftPanel.backgroundColor = originalColor
-        sender.backgroundColor = UIColor.blueColor()
+        //rightPanel.backgroundColor = UIColor.blueColor()
+        //leftPanel.backgroundColor = originalColor
+        //sender.backgroundColor = UIColor.blueColor()
         game.moveRight()
     }
     
     @IBAction func leftChosen(sender: UIButton) {
         print("You Chosen Left!")
-        leftPanel.backgroundColor = UIColor.blueColor()
-        rightPanel.backgroundColor = originalColor
-        sender.backgroundColor = UIColor.blueColor()
+        //leftPanel.backgroundColor = UIColor.blueColor()
+        //rightPanel.backgroundColor = originalColor
+        //sender.backgroundColor = UIColor.blueColor()
         game.moveLeft()
     }
 }

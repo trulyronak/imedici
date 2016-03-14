@@ -19,6 +19,7 @@ class Choice: NSObject, NSCoding {
     var left: String?
     var right: String?
     
+    var singleChoice = false
     init(identity: String) {
         self.identifier = identity
         isActive = false
@@ -28,6 +29,12 @@ class Choice: NSObject, NSCoding {
         year = 1420
     }
     
+    ///Not What You Think
+    func checkIfSingle() {
+        if left == "none" {
+            singleChoice = true
+        }
+    }
     //data management protocols
     func encodeWithCoder(coder: NSCoder) {
         coder.encodeObject(isActive, forKey: "isActive")

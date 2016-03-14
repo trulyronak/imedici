@@ -9,6 +9,8 @@
 import UIKit
 
 class Reader {
+    
+    //MARK: - Data Reading
     func readData() -> [Choice: [String: Choice]]! {
         var worked = false
         
@@ -17,6 +19,7 @@ class Reader {
         
         var file = NSBundle.mainBundle().pathForResource("ChoiceTree", ofType: "txt")! //this is the file. we will write to and read from it
         
+        //MARK: - Reading Choice Content
         if let reader = StreamReader(path: file) {
             worked = true
             var currentChoice: Choice!
@@ -67,7 +70,22 @@ class Reader {
                 }
             }
             
+            //MARK: - Debugging Choice Tree
             
+            /*
+            for choice in choices.values {
+            print("")
+            print("Choice \(choice.identifier) ")
+            if choice.identifier.containsString("EVENT_") {}
+            else {
+            print("Right: \(choice.right) ")
+            print("\(choice.identifier)'s right: \(choices[choice.right!])")
+            print("Left: \(choice.left) ")
+            print("\(choice.identifier)'s left: \(choices[choice.left!])")
+            }
+            print("")
+            }
+            */
             defer {
                 reader.close()
             }
@@ -89,6 +107,7 @@ class Reader {
         
         file = NSBundle.mainBundle().pathForResource("ChoiceContent", ofType: "txt")!
         
+        //MARK: - Reading Choice Content
         if let reader = StreamReader(path: file) {
             while let line = reader.nextLine() {
                 if line == "choice AA" {
@@ -206,9 +225,7 @@ class Reader {
                         currentChoice = choices[line.wordAtIndex(1)!]
                         print("Current Choice: \(line.wordAtIndex(1))")
                         print("")
-                        if currentChoice.identifier == "AA" {
-                            currentChoice.identifier = "AA"
-                        }
+                        currentChoice.checkIfSingle()
                     }
                     else if (line.wordAtIndex(0) == "year") {
                         currentChoice.year = Int(line.wordAtIndex(1)!)!
@@ -219,6 +236,7 @@ class Reader {
                     else if (line == "decision") {
                         decisionTrue = true
                         currentChoice.decision = Decision()
+                        
                     }
                 }
                 
@@ -228,247 +246,45 @@ class Reader {
             defer {
                 reader.close()
             }
+            //MARK: Debugging Choice Content
             /*
             for choice in choices.values {
-                do {
-                    
-                    print("")
-                    print("Choice \(choice.identifier)")
-                    print("Choice Content")
-                    print(choice.content.text)
-                    print("Choice Decision:")
-                    print(choice.decision.prompt)
-                    
-                    print("Left Panel")
-                    print(choice.decision.leftText)
-                    print(choice.decision.leftBulletPoints)
-                    print(choice.decision.leftImage)
-                    print(choice.decision.cost)
-                    print("Right Panel")
-                    print(choice.decision.rightText)
-                    print(choice.decision.rightBulletPoints)
-                    print(choice.decision.rightImage)
-                    print(choice.decision.moneyEarned)
-                    print("")
-                }
-                catch _ {
-                    print("TRUST ME")
-                }
-                
+            
+            
+            print("")
+            print("Choice \(choice.identifier)")
+            print("Choice Content")
+            print(choice.content.text)
+            if choice.identifier.containsString("X"){}
+            if choice.identifier.containsString("EVENT_") {}
+            else {
+            print("Choice Decision:")
+            print(choice.decision.prompt)
+            if choice.left!.containsString("none") {}
+            else {
+            print("Left Panel")
+            print(choice.decision.leftText)
+            print(choice.decision.leftBulletPoints)
+            print(choice.decision.leftImage)
+            print(choice.decision.cost)
+            }
+            print("Right Panel")
+            print(choice.decision.rightText)
+            print(choice.decision.rightBulletPoints)
+            print(choice.decision.rightImage)
+            print(choice.decision.moneyEarned)
+            print("")
+            
+            }
+            
+            
             }*/
         }
         else {
             worked = false
         }
-        /*
-        let file = NSBundle.mainBundle().pathForResource("ChoiceContent", ofType: "txt")! //this is the file. we will write to and read from it
-        
-        if let reader = StreamReader(path: file) {
-        var currentChoice: Choice!
-        
-        
-        //bools
-        var choiceTrue = false
-        var decisionTrue = false
-        var contentTrue = false
-        
-        //decision bools
-        var promptTrue = false
-        var leftPanelTrue = false
-        var rightPanelTrue = false
-        var pictureTrue = false
-        var textTrue = false
-        var costTrue = false
-        var allowMoneyTrue = false
-        var moneyEarnedTrue = false
-        var bulletPointsTrue = false
-        
-        
-        func negateAllDecision() {
-        promptTrue = false
-        
-        pictureTrue = false
-        textTrue = false
-        costTrue = false
-        allowMoneyTrue = false
-        moneyEarnedTrue = false
-        bulletPointsTrue = false
-        }
-        var decision: Decision!
-        var content: Content!
-        
-        var outsideBypass = -1
-        var bypass = false
-        while let line = reader.nextLine() {
-        var place: Int!
-        
-        if !bypass {
-        let options = ["choice", "content", "decision", "prompt", "leftPanel", "rightPanel", "response1", "response2"]
-        let inner = ["picture", "text", "bulletPoints", "cost" , "allowMoney", "moneyEarned", "cost", "major"]
-        
-        for opt in options {
-        if line == opt {
-        place = options.indexOf(opt)
-        }
-        }
-        }
-        else {
-        place = outsideBypass
-        }
-        switch(place) {
-        case 0:
-        //case choice
-        currentChoice = choices[line.wordAtIndex(1)!] //second word
-        break
-        case 1, 2:
-        //case content, decision
-        outsideBypass = true
-        currentChoice.content = content
-        currentChoice.decision = decision
-        
-        bypass = true
-        break
-        case 3:
-        //case prompt
-        break
-        case 4:
-        //case leftPanel
-        break
-        case 5:
-        //case rightPanel
-        break
-        case 6:
-        //case response1
-        break
-        case 7:
-        //case response2
-        break
-        default:
-        break
-        }
-        }
-        
-        */
-        /*
-        while let line = reader.nextLine() {
-        print(line)
-        if line.wordAtIndex(0) == "#" {
-        //do nothing, its just a comment
-        }
-        
-        else if line.wordAtIndex(0) == "choice" {
-        //choice
-        currentChoice = choices[line.wordAtIndex(1)!]
-        choiceTrue = true
-        }
-        
-        else {
-        if line.wordAtIndex(0) == "content" {
-        contentTrue = true
-        choiceTrue = false
-        decisionTrue = false
-        if decision != nil {
-        currentChoice.decision = decision
-        }
-        }
-        else if line.wordAtIndex(0) == "decision" {
-        decisionTrue = true
-        contentTrue = false
-        choiceTrue = false
-        decision = Decision()
-        }
-        
-        else if contentTrue {
-        var textRead = line
-        var newContent = Content(text: textRead)
-        currentChoice.content = newContent
-        }
-        else if decisionTrue {
-        if line.wordAtIndex(0) == "prompt"{
-        negateAllDecision()
-        promptTrue = true
-        }
-        else if line.wordAtIndex(0) == "leftPanel" || line.wordAtIndex(0) == "panel1"{
-        negateAllDecision()
-        leftPanelTrue = true
-        }
-        else if line.wordAtIndex(0) == "picture" {
-        negateAllDecision()
-        pictureTrue = true
-        }
-        else if line.wordAtIndex(0) == "text" {
-        
-        negateAllDecision()
-        textTrue = true
-        }
-        else if line.wordAtIndex(0) == "bulletPoints" {
-        negateAllDecision()
-        bulletPointsTrue = true
-        decisionTrue = false // to avoid too long loading
-        }
-        else if line.wordAtIndex(0) == "cost" {
-        negateAllDecision()
-        costTrue = true
-        }
-        else if line.wordAtIndex(0) == "rightPanel" || line.wordAtIndex(0) == "panel2" {
-        negateAllDecision()
-        rightPanelTrue = true
-        leftPanelTrue = false
-        }
-        else if line.wordAtIndex(0) == "allowMoney" {
-        negateAllDecision()
-        allowMoneyTrue = true
-        }
-        
-        //now for the actual content part
-        else if promptTrue {
-        decision.prompt = line
-        }
-        else if leftPanelTrue && textTrue {
-        decision.leftText = line
-        }
-        else if rightPanelTrue && textTrue {
-        decision.rightText = line
-        }
-        else if pictureTrue {
-        if rightPanelTrue {
-        decision.rightImage = UIImage(named: line)
-        }
-        else if leftPanelTrue {
-        decision.leftImage = UIImage(named: line)
-        }
-        }
-        else if costTrue {
-        decision.cost = Double(line)
-        }
-        else if allowMoneyTrue {
-        if line == "true" {
-        decision.allowMoney = true
-        }
-        else {
-        decision.allowMoney = false
-        }
-        }
-        else if moneyEarnedTrue {
-        decision.moneyEarned = Double(line)
-        }
-        }
-        else if bulletPointsTrue {
-        if line.wordAtIndex(0) == "-" && leftPanelTrue {
-        var bullet = line.substringWithRange(Range<String.Index>(start: line.startIndex.advancedBy(1), end: line.endIndex)) //"llo, playgroun"
-        decision.leftBulletPoints.append(bullet)
-        }
-        else if line.wordAtIndex(0) == "-" && rightPanelTrue {
-        var bullet = line.substringWithRange(Range<String.Index>(start: line.startIndex.advancedBy(1), end: line.endIndex)) //"llo, playgroun"
-        decision.rightBulletPoints.append(bullet)
-        }
-        else if line.wordAtIndex(0) == "done" {
-        decisionTrue = true
-        }
-        }
-        */
         if worked {
-            
+            //MARK: - Returning Choices
             var toReturn: [Choice: [String: Choice]] = [Choice: [String: Choice]]()
             toReturn.updateValue(choices, forKey: choices[startChoice]!)
             

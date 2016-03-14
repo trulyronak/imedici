@@ -25,7 +25,8 @@ class Decision: NSObject, NSCoding{
     var moneyEarned: Double?
     var allowMoney: Bool?
 
-    
+    //general
+    var singleChoice: Bool = false
     override init() {
         //left
         leftImage = nil
@@ -41,8 +42,6 @@ class Decision: NSObject, NSCoding{
         allowMoney = false
         //general
         prompt = nil
-        
-        
     }
     
     func leftImageTrue() -> Bool {

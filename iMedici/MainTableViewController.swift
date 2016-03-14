@@ -14,13 +14,13 @@ tableView.rowHeight = UITableViewAutomaticDimension;
 import UIKit
 
 class MainTableViewController: UITableViewController {
-
+    
     //MARK: - Variables
-
+    
     var bools: [String:Bool]!
     var cells: [UITableViewCell]!
     
-
+    
     //MARK: - UIViewControler Methods
     
     override func viewDidLoad() {
@@ -31,59 +31,62 @@ class MainTableViewController: UITableViewController {
         bools.updateValue(false, forKey: "decision")
         bools.updateValue(true, forKey: "firstRun")
     }
-
+    
     override func viewDidAppear(animated: Bool) {
-        loadCells()
+        if bools["firstRun"] == true {
+            loadCells()
+            bools.updateValue(false, forKey: "firstRun")
+        }
+        
         tableView.reloadData()
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-
+    
     // MARK: - Table View Code
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return cells.count
     }
-
+    
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = cells[indexPath.row]
-
-        if bools["firstRun"] == true {
-            tableView.rowHeight = 380
-            bools.updateValue(false, forKey: "firstRun")
-        }
-        else if let _ = cell as? ContentTableViewCell{
+        
+        if let _ = cell as? ContentTableViewCell{
             tableView.rowHeight = 160
-
+            
         }
         else{
-            tableView.rowHeight = 380
-
+            if let decisionCell = cell as? DecisionTableViewCell {
+                if decisionCell.identifier == game.story.startChoice.identifier {
+                    tableView.rowHeight = 380
+                    
+                }
+            }
+            else {
+                tableView.rowHeight = 380
+            }
+            
         }
         //cell.selectionStyle = UITableViewCellSelectionStyle.None
-
+        
         return cell
     }
     
-    // MARK: - IBActions
-    
-    @IBAction func rightChosen(sender: UIButton) {
-        print("You Chosen Right!")
-        game.moveRight()
-        loadCells()
-        sender.removeTarget(nil, action: nil, forControlEvents: .AllEvents)
-        
-        
-    }
-    
-    @IBAction func leftChosen(sender: UIButton) {
-        //includes majors
-        print("You Chosen Left!")
-        game.moveLeft()
-        loadCells()
+    override func tableView(tableView: UITableView,
+        heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
+            if indexPath.row == 0 {
+                return 380
+            }
+            else if indexPath.row % 2 == 1 { //if its even
+                return 450
+            }
+            else {
+                return 170
+            }
     }
     
     // MARK: - Other Methods
@@ -93,8 +96,9 @@ class MainTableViewController: UITableViewController {
         cells.appendContentsOf(newCells)
         updateUI()
         tableView.contentOffset = CGPointMake(0, CGFloat.max)
-
+        
         tableView.reloadData()
+        print(cells)
     }
     
     func updateUI() {
@@ -105,14 +109,14 @@ class MainTableViewController: UITableViewController {
             self.navigationItem.rightBarButtonItem?.title = String(year)
         }
     }
-
+    
     /*
-
+    
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    // Get the new view controller using segue.destinationViewController.
+    // Pass the selected object to the new view controller.
     }
     */
-
+    
 }
