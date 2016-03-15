@@ -24,8 +24,8 @@ right BBA
 left BC
 
 choice AC
-right none
-left AD
+right AD
+left none
 
 choice ABA
 right AD
@@ -44,8 +44,8 @@ right AE
 left ADA
 
 choice AE
-right none
-left AF
+right AF
+left none
 
 choice AF
 right AG
@@ -56,16 +56,16 @@ right AH
 left AGA
 
 choice AH
-right none
-left EVENT_1
+right EVENT_1
+left none
 
 choice AGA
 left none
 right EVENT_1
 
 choice AFA
-right none
-left AFB
+right AFB
+left none
 
 choice AFB
 right EVENT_1
@@ -80,8 +80,8 @@ right ADA
 left ACB
 
 choice ADA
-right none
-left AF
+right AF
+left none
 
 choice ACB
 right AF
@@ -112,8 +112,8 @@ right EVENT_1
 left EVENT_1
 
 choice ABE
-right none
-left EVENT_1
+right EVENT_1
+left none
 
 choice BD
 right BCA
@@ -219,8 +219,8 @@ right XBE
 left XDD
 
 choice XDD
-right none
-left XDE
+right XDE
+left none
 
 choice XDE
 right EVENT_FINAL
@@ -239,8 +239,8 @@ right XBD
 left XDC
 
 choice XBD
-right none
-left XBE
+right XBE
+left none
 
 choice XBE
 right XBEA
@@ -263,8 +263,8 @@ right XAC
 left XABA
 
 choice XABA
-right none
-left XBB
+right XBB
+left none
 
 choice XAC
 right XACA
@@ -315,8 +315,8 @@ right YG
 left XADC
 
 choice YG
-left YH
-right none
+left none
+right YH
 
 choice YH
 right EVENT_FINAL
