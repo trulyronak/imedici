@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15A284" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" initialViewController="01J-lp-oVM">
     <dependencies>
-        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
     </dependencies>
     <scenes>
@@ -16,12 +15,60 @@
                     <view key="view" contentMode="scaleToFill" id="Ze5-6b-2t3">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SHAH" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gpB-zZ-5Cy">
+                                <rect key="frame" x="194" y="160" width="213" height="55"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="55" id="eiR-8c-k5c"/>
+                                    <constraint firstAttribute="width" constant="213" id="vKt-zY-BQo"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Copperplate" family="Copperplate" pointSize="72"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="INDUSTRIES" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NsK-6D-iwG">
+                                <rect key="frame" x="132" y="208" width="337" height="56"/>
+                                <fontDescription key="fontDescription" name="Copperplate" family="Copperplate" pointSize="51"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="RobZaheer Productions" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LFc-hv-j69">
+                                <rect key="frame" x="132" y="303" width="336" height="56"/>
+                                <fontDescription key="fontDescription" name="Optima-Regular" family="Optima" pointSize="30"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="shahindustries.one" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PbT-Kc-RIr">
+                                <rect key="frame" x="132" y="249" width="336" height="34"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="336" id="10q-TM-d9g"/>
+                                    <constraint firstAttribute="height" constant="34" id="YJM-b6-Z44"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Optima-Regular" family="Optima" pointSize="20"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="xb3-aO-Qok" firstAttribute="top" secondItem="LFc-hv-j69" secondAttribute="bottom" constant="241" id="5k8-iN-dQZ"/>
+                            <constraint firstItem="PbT-Kc-RIr" firstAttribute="leading" secondItem="LFc-hv-j69" secondAttribute="leading" id="GCM-A0-AIr"/>
+                            <constraint firstItem="LFc-hv-j69" firstAttribute="top" secondItem="NsK-6D-iwG" secondAttribute="bottom" constant="39" id="KbI-Ie-bM4"/>
+                            <constraint firstItem="PbT-Kc-RIr" firstAttribute="top" secondItem="gpB-zZ-5Cy" secondAttribute="bottom" constant="34" id="L87-lP-Bdr"/>
+                            <constraint firstItem="PbT-Kc-RIr" firstAttribute="leading" secondItem="NsK-6D-iwG" secondAttribute="leading" id="M3O-Zq-mA5"/>
+                            <constraint firstItem="gpB-zZ-5Cy" firstAttribute="top" secondItem="Llm-lL-Icb" secondAttribute="bottom" constant="140" id="QLB-wd-6Mi"/>
+                            <constraint firstItem="LFc-hv-j69" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="Z70-Rm-BeY"/>
+                            <constraint firstItem="gpB-zZ-5Cy" firstAttribute="centerX" secondItem="NsK-6D-iwG" secondAttribute="centerX" id="blS-Dz-ha3"/>
+                            <constraint firstItem="LFc-hv-j69" firstAttribute="top" secondItem="PbT-Kc-RIr" secondAttribute="bottom" constant="20" id="etH-yu-P9v"/>
+                            <constraint firstItem="PbT-Kc-RIr" firstAttribute="trailing" secondItem="LFc-hv-j69" secondAttribute="trailing" id="fHe-Mw-whn"/>
+                            <constraint firstItem="NsK-6D-iwG" firstAttribute="top" secondItem="Llm-lL-Icb" secondAttribute="bottom" constant="188" id="u2H-Z8-lAn"/>
+                            <constraint firstItem="NsK-6D-iwG" firstAttribute="centerX" secondItem="PbT-Kc-RIr" secondAttribute="centerX" id="uQH-UE-X9e"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iYj-Kq-Ea1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="53" y="375"/>
+            <point key="canvasLocation" x="313" y="381"/>
         </scene>
     </scenes>
 </document>

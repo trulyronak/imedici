@@ -12,6 +12,7 @@ tableView.rowHeight = UITableViewAutomaticDimension;
 */
 
 import UIKit
+import AVFoundation
 
 class MainTableViewController: UITableViewController {
     
@@ -24,6 +25,7 @@ class MainTableViewController: UITableViewController {
     //MARK: - UIViewControler Methods
     
     override func viewDidLoad() {
+        loadMusic()
         bools = [String:Bool]()
         super.viewDidLoad()
         cells = [UITableViewCell]()
@@ -46,6 +48,28 @@ class MainTableViewController: UITableViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    //MARK: - Music
+    func loadMusic() {
+        if let path = NSBundle.mainBundle().pathForResource("Music", ofType: "mp3") {
+            
+            
+            let song = NSURL(fileURLWithPath:path)
+            do {
+                try AVAudioSession.sharedInstance().setCategory(AVAudioSessionCategoryPlayback)
+                try AVAudioSession.sharedInstance().setActive(true)
+                
+                let player = try AVAudioPlayer(contentsOfURL: song)
+                player.numberOfLoops = -1
+                player.prepareToPlay()
+                player.volume = 1.0
+                player.play()
+                print("done")
+            }
+            catch {
+                print("Error")
+            }
+        }
+    }
     // MARK: - Table View Code
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return cells.count
@@ -94,6 +118,12 @@ class MainTableViewController: UITableViewController {
     func loadCells() {
         let newCells = game.getCurrentBlock(self)
         cells.appendContentsOf(newCells)
+        if bools["IDK"] == nil {
+            bools.updateValue(true, forKey: "IDK")
+        }
+        else {
+            
+        }
         updateUI()
         tableView.contentOffset = CGPointMake(0, CGFloat.max)
         

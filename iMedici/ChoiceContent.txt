@@ -27,15 +27,15 @@ decision
 
 prompt Will you sponsor him, or will you continue focus on banking for a larger budget?
 
-rightPanel
+leftPanel
 #AB
 text Jacobello del Fiore
 picture JacobelloFiore
 bulletPoints - Gothic style - painter of more famous Madonna of Mercy
 rep 1
-cost 1000
+cost 300
 done
-leftPanel
+rightPanel
 #BB
 text Don’t Patron; Use money to continue banking
 allowMoney true
@@ -57,7 +57,7 @@ picture JacobelloFiore
 bulletPoints - Gothic Painter - painter of the famous Madonna of Mercy
 
 rep 1
-cost 1000
+cost 300
 done
 rightPanel
 #AB
@@ -72,20 +72,20 @@ content The next painter waiting for your financial help is Domenico di Bartolo,
 decision
 prompt Will you choose him for painting or will you instead pursue banking to increase your budget?
 
-leftPanel
+rightPanel
 #AC
 text Don’t Patron; Use money to continue banking
 allowMoney true
 moneyEarned 200
 done
 
-rightPanel
+leftPanel
 #ABA
 text Domenico di Bartolo
 picture DomenicoBartolo
 bulletPoints - Early Renaissance style - combination of religion and humanism
 rep 2
-cost 200
+cost 300
 done
 
 choice BB
@@ -111,24 +111,23 @@ done
 choice AC
 year 1440
 
-content The famous sculptor Donatello has approached you for the commissioning of Young Man with a Cameo, and wants to do it for a discount of 75% off.
+content Lorenzo de Medici has died, leaving the house rule to Cosimo de Medici, his brother. The famous sculptor Donatello has approached you for the commissioning of Young Man with a Cameo, and wants to do it for a discount of 75% off.
 decision
 prompt This is a one-time offer that you CANNOT refuse.
-rightPanel none
 done
 leftPanel
- #AD
+#AD
 text Take Offer
 rep 1
-cost 175
+cost 250
 done
 
 choice ABA
 year 1440
-content The next artist is Fra Filippo Lippi, who wants to commission Madonna and Child.
+content Lorenzo de Medici has died, leaving the house rule to Cosimo de Medici, his brother. An artist named Fra Filippo Lippi wants to commission Madonna and Child.
 decision
 prompt Will Lippi be your next patronage investment?
-rightPanel
+leftPanel
 #AD
 text Fra Filippo Lippi
 bulletPoints - Early Renaissance painter - worked on Madonna and Child paintings
@@ -136,7 +135,7 @@ picture FraLippi
 rep 1
 cost 250
 done
-leftPanel
+rightPanel
 #ABB
 text Don’t Patron; Use money to continue banking
 allowMoney true
@@ -171,9 +170,8 @@ done
 choice BBA
 #didnt choose donatello the first time, went for money
 year 1447
-content
-The artist Sano di Pietro has asked for money to create his painting, Virgin and Child.
-
+content The artist Sano di Pietro has asked for money to create his painting, Virgin and Child.
+decision
 prompt Will you sponsor Pietro?
 
 rightPanel
@@ -196,7 +194,7 @@ year 1445
 content The next artist is Luca della Robbia with his piece, Visitation.
 decision
 prompt Will you fund Luca’s efforts?
-rightPanel
+leftPanel
 #AE
 text Luca della Robbia
 picture LucaRobbia
@@ -204,7 +202,7 @@ bulletPoints - is a tin-covered terracotta piece - developed sculpting technique
 cost 250
 rep 2
 done
-leftPanel
+rightPanel
 #ADA
 text Don’t Patron; Use money to continue banking
 allowMoney true
@@ -222,7 +220,7 @@ leftPanel
 #AF
 text Continue
 cost 400
-Rep -1
+rep -1
 done
 
 
@@ -232,16 +230,833 @@ year 1448
 content The next artist is Sano di Pietro with his Birth of the Virgin.
 decision
 prompt Will you take the offer?
-rightPanel
+leftPanel
 #AG
 text Sano di Pietro
 picture SanoPietro
+bulletPoints - was part of the Sienese school, rival to Florentinian schools - was pretty well-known in the painting community
 cost 200
 rep 1
 done
-leftPanel
+rightPanel
 #AFA
 text Don’t Patron; Use money to continue banking
 allowMoney true
 moneyEarned 220
 done
+
+choice AG
+year 1455
+content An artist named Piero della Francesca wants you to sponsor his next piece, The History of the True Cross.
+decision
+prompt Will you take on this sponsorship?
+leftPanel
+#AH
+text Piero della Francesca
+picture PieroFrancesca
+cost 250
+rep 2
+done
+rightPanel
+#AGA
+text Don’t Patron; Use money to continue banking
+allowMoney true
+moneyEarned 220
+done
+
+choice AH
+year 1462
+content The collapse of one of the rival banks in Florence has allowed for a boost in business in your banks.
+decision
+prompt You gained 100 extra florins!
+leftPanel
+#EVENT_1
+text Continue
+allowMoney true
+moneyEarned 320
+rep 1
+done
+
+
+choice AGA
+year 1460
+content An opposing bank pays a corrupt journalist to write bad things about your business! Your profits plummet.
+decision
+prompt You lost 50 florins from annual income!
+leftPanel
+#EVENT_1
+text Continue
+allowMoney true
+moneyEarned 170
+rep -1
+done
+choice AFA
+year 1470
+content A new banking business rival has sprung up and has been doing excellently, detracting from your profits.
+decision
+prompt You lost 30 florins in annual profit!
+leftPanel
+#AFB
+text Continue
+allowMoney true
+moneyEarned 190
+rep -1
+done
+choice AFB
+year 1474
+content Cosimo Tura wants to paint Madonna Enthroned with your financial help.
+decision
+prompt Will you fund this painting?
+rightPanel
+#EVENT_1
+text Don’t Patron; Use money to continue banking
+allowMoney true
+moneyEarned 220
+done
+leftPanel
+#EVENT_1
+text Cosimo Tura
+picture CosimoTura
+bulletPoints - one of many Madonna Enthroned paintings
+cost 300
+rep 1
+done
+choice ABB
+year 1445
+content The next artist is Zanobi Machiavelli with his Vierge à l'enfant.
+decision
+prompt Will you take him up on the offer?
+leftPanel
+#ACA
+text Zanobi Machiavelli
+bulletPoints - was pupil of the pupil of Filipo Lipi - painted using older styles, more medieval
+picture ZanobiMachiavelli
+cost 300
+rep 1
+done
+rightPanel
+#ABC
+text Don’t Patron; Use money to continue banking
+allowMoney true
+moneyEarned 220
+done
+choice ACA
+year 1450
+content The next artist is Andrea del Castagno with his Assumption of the Virgin between St. Miniato and St. Julian.
+decision
+prompt Will you sponsor this artist?
+leftPanel
+#ADA
+text Andrea del Castagno
+picture AndreaCastagno
+bulletPoints - is for the main altar in St. Julian Chapel - is still quite medieval in style
+cost 250
+rep 1
+done
+rightPanel
+#ACB
+text Don’t Patron; Use money to continue banking
+allowMoney true
+moneyEarned 220
+done
+choice ADA
+year 1455
+content One of your rivals went bankrupt, leaving you with one less competitor.
+decision
+prompt You gained 30 extra florins!
+leftPanel
+#AH
+text Continue
+allowMoney true
+moneyEarned 250
+done
+choice ACB
+year 1460
+content The next artist is Antonello de Messina with his Salting Madonna.
+decision
+prompt Will you take him up for sponsorship?
+leftPanel
+#AH
+text Antonello de Messina
+picture AntonelloMessina
+bulletPoints - Contains many cultural references and styles - Looks more like High Renaissance art than medieval art
+cost 350
+rep 2
+done
+rightPanel
+#ACC
+text Don’t Patron; Use money to continue banking
+allowMoney true
+moneyEarned 220
+done
+choice ACC
+year 1468
+content The artist Niccolo Fiorentino wants you to fund his efforts of the expansion of the Chapel of Blessed John from Trogir.
+decision
+prompt Will you fund the expansion?
+rightPanel
+#AFA
+text Don’t Patron; Use money to continue banking
+allowMoney true
+moneyEarned 220
+done
+leftPanel
+#ACD
+text Niccolo Fiorentino
+picture Niccolo Fiorentino
+bulletPoints - combines architecture and sculpture - worked on architecture for churches
+cost 350
+rep 2
+done
+choice ACD
+year 1470
+content The artist Antoniazzo Romano wants you to fund Virgin and Child Enthroned.
+decision
+prompt Will you fund him?
+rightPanel
+#AFB
+text Don’t Patron; Use money to continue banking
+allowMoney true
+moneyEarned 220
+done
+leftPanel
+#ACE
+text Antoniazzo Romano
+bulletPoints - One of many renditions of Virgin and Child
+picture Antoniazzo Romano
+cost 300
+rep 1
+done
+choice ACE
+year 1475
+content Francesco Benaglio wants you to commission his fresco at Santa Maria della Scara.
+decision
+prompt Will you fund him?
+rightPanel
+#EVENT_1
+text Don’t Patron; Use money to continue banking
+allowMoney true
+moneyEarned 220
+done
+leftPanel
+#EVENT_1
+text Francesco Benaglio
+picture FrancescoBenaglio
+bulletPoints - not very well-known for fresco painting
+cost 250
+rep 1
+done
+choice ABC
+year 1447
+content Giovanni Boccati wants to work on his Madonna del Pergolato with your funds.
+decision
+prompt Will you accept the offer?
+rightPanel
+#ABCA
+text Don’t Patron; Use money to continue banking
+allowMoney true
+moneyEarned 220
+done
+leftPanel
+#ABD
+text Giovanni Boccati
+picture GiovanniBocatti
+bulletPoints - studied works of famous artists like Fra Angelico and Filippo Lippi
+cost 300
+rep 2
+done
+choice ABD
+year 1455
+content An artist named Piero della Francesca wants you to sponsor his next piece, The History of the True Cross.
+decision
+prompt Will you take on this sponsorship?
+leftPanel
+#ABE
+text Piero della Francesca
+picture PieroFrancesca
+cost 250
+rep 2
+done
+rightPanel
+#ABCB
+text Don’t Patron; Use money to continue banking
+allowMoney true
+moneyEarned 220
+done
+
+choice ABCB
+year 1460
+content Benedetto Bonfigli wants your funding for his Adoration of the Magi for San Domenico.
+decision
+prompt Will you accept the offer?
+rightPanel
+#EVENT_1
+text Don’t Patron; Use money to continue banking
+allowMoney true
+moneyEarned 220
+done
+leftPanel
+#EVENT_1
+text Benedetto Bonfigli
+picture BenedettoBonfigli
+bulletPoints - made for medieval-esque church
+rep 1
+cost 350
+done
+choice ABE
+year 1460
+content One of your banks in Florence has been robbed!
+decision
+prompt 250 florins were stolen before the thieves escaped.
+leftPanel
+#EVENT_1
+text Continue
+cost 250
+done
+
+choice BD
+#yes to donatello
+year 1449
+content After your previous endorsements, you are gaining reputation in the artistic world. Now, artist Giovanni di ser Giovanni Guidi wants to paint a piece for your newly born grandson, Lorenzo.
+decision
+prompt Will you commemorate your son’s birth with this painting, or will you make more money for his future?
+rightPanel
+# BCA
+text Make Money
+allowMoney true
+moneyEarned 300
+done
+leftPanel
+# BE
+cost 450
+text Giovanni di ser Giovanni Guidi
+bulletPoints - Good Friends With Your Family - Luxury Architech - Talented Artist (Frescoes and Altarpieces)
+picture GiovanniGuidi
+rep 4
+done
+
+choice BE
+#yes to giovanni
+year 1455
+content The sale of Giovanni’s piece was a huge success! Word got around and your banks got a boost in profit!
+decision
+prompt You gained 100 extra florins!
+
+leftPanel
+#BF
+text Continue
+allowMoney true
+moneyEarned 320
+done
+choice BF
+year 1456
+content The sculptor, Donato di Niccolò di Betto Bardi, wants you to commission his piece, Chellini Madonna.
+decision
+prompt Will you take him up on the offer?
+rightPanel
+#EVENT_1
+text Don’t Patron; Use money to continue banking
+allowMoney true
+moneyEarned 220
+done
+left EVENT_1
+text Donato di Niccolò di Betto Bardi
+picture Donatello
+bulletPoints - is VERY famous among the art community - sculptor of David in Florence
+cost 550
+rep 5
+done
+choice BBB
+year 1440
+content Paolo Uccello wants to create his second St. George and the Dragon.
+decision
+prompt Will you take him up on the offer?
+rightPanel
+#AD
+text Don’t Patron; Use money to continue banking
+allowMoney true
+moneyEarned 220
+done
+left BBC
+text Paolo Uccello
+picture PaoloUccello
+bulletPoints - Is also a mathmatician - used late Gothic styles
+rep 1
+cost 350
+done
+
+choice BBC
+year 1445
+content The artist Domenico Veneziano wants to, with your financial help, create the Santa Lucia de’ Magnoli Alterpiece.
+decision
+prompt Will you accept the offer?
+rightPanel
+#EVENT_1
+text Don’t Patron; Use money to continue banking
+allowMoney true
+moneyEarned 220
+done
+left EVENT_1
+text Domenico Veneziano
+picture DomenicoVeneziano
+bulletPoints - painted in oil, a new pallet for the Early Renaissance
+cost 450
+rep 2
+done
+choice BCA
+#no to donatello and BD
+year 1450
+content A new banking business rival has sprung up and has been doing excellently, detracting from your profits.
+decision
+prompt You lost 30 florins in annual profit!
+leftPanel
+#BDA
+text Continue
+allowMoney true
+moneyEarned 190
+rep -1
+done
+
+choice BDA
+year 1455
+content The artist Fra Filippo Lippi wants you to fund his Madonna and Child.
+decision
+prompt Will you fund his efforts?
+rightPanel
+#BDB
+text Don’t Patron; Use money to continue banking
+allowMoney true
+moneyEarned 220
+done
+leftPanel
+#BF
+text Filippo Lippi
+picture FilippoLippi
+bulletPoints - very famous among the art community - painted more like High Renaissance styles than Gothic
+rep 4
+cost 500
+done
+choice BDB
+year 1460
+content Giovanni di Paolo wants you to commission his Saint Catherine before the Pope at Avignon.
+decision
+prompt Do you accept the offer?
+rightPanel
+#EVENT_1
+text Don’t Patron; Use money to continue banking
+allowMoney true
+moneyEarned 220
+done
+leftPanel
+#EVENT_1
+text Giovanni di Paolo
+picture GiovanniPaolo
+bulletPoints - Still painted with Gothic styles, but with newer flare
+cost 350
+rep 1
+done
+
+choice EVENT_1
+year 1469
+content Cosimo de Medici died in 1464, leaving the control of the banking company in your hands as Pietro. However, you are old, and will die soon. You shall choose the next heir to the throne from your two sons, Lorenzo and Giuliano.
+decision
+prompt Will you choose Giuliano or Lorenzo?
+leftPanel
+text Giuliano
+picture Giuliano
+done
+rightPanel
+text Lorenzo
+picture Lorenzo
+done
+
+choice XA
+year 1475
+content A sculptor named Andrea del Verrocchio wants you to give the ‘ok’ for the finishing of his David, commissioned by Pietro, your father.
+decision
+prompt Will you go back on your father’s word, or continue with the product?
+rightPanel
+#XAA
+text Don’t Patron; Use money to continue banking
+allowMoney true
+moneyEarned 220
+done
+leftPanel
+#XB
+text Andrea del Verrocchio
+picture AndreaVerrocchio
+cost 500
+bulletPoints - Is a bronze statue - is in heavy contrast to Donatello’s David, being modestly dressed instead of provocatively naked
+rep 4
+done
+choice XB
+year 1480
+content The next artist is Jacopo del Sellaio with his Saint John the Baptist that he wants you to commission.
+decision
+prompt Will you accept the offer?
+rightPanel
+#XBA
+text Don’t Patron; Use money to continue banking
+allowMoney true
+moneyEarned 220
+done
+leftPanel
+#XC
+text Jacopo del Sellaio
+picture JacopoSellaio
+bulletPoints - studied in the Florentine School - is the pupil of Fra Filippo Lippi
+cost 450
+rep 2
+done
+choice XC
+year 1485
+content Jacopo’s painting was a huge success, temporarily increasing profits in your banking business.
+decision
+prompt Your profits increased by 80 florins!
+leftPanel
+#XD
+text Continue
+allowMoney true
+moneyEarned 300
+done
+choice XD
+year 1487
+content The next artist is Biagio d’Antonio who wants your financial help in creating The Betrothal of Jason and Medea.
+decision
+prompt Will you accept his proposition?
+rightPanel
+#EVENT_FINAL
+text Don’t Patron; Use money to continue banking
+allowMoney true
+moneyEarned 220
+done
+leftPanel
+#EVENT_FINAL
+text Biagio d’Antonio
+picture BiagioAntonio
+bulletPoints - shows mainly Florentinian influence - also shows some Netherlandish styles and other international influences
+cost 350
+rep 2
+done
+
+choice XBA
+year 1486
+content The painter Baldassare Estense wants you to fund his portrait of John Corvinus.
+decision
+prompt Will you fund him?
+rightPanel
+#XBB
+text Don’t Patron; Use money to continue banking
+allowMoney true
+moneyEarned 220
+done
+leftPanel
+#XD
+text Baldassare Estense
+picture BaldassareEstense
+bulletPoints - pupil of Cosimo Tura, a pretty famous artist
+cost 350
+rep 1
+done
+
+choice XBB
+year 1490
+content The famous artist Michelangelo di Lodovico Buonarroti Simoni wants you to commission Madonna of the Steps.
+decision
+prompt Will you commission the piece?
+rightPanel
+#EVENT_FINAL
+text Don’t Patron; Use money to continue banking
+allowMoney true
+moneyEarned 220
+done
+leftPanel
+#EVENT_FINAL
+text Michelangelo di Lodovico Buonarroti Simoni
+picture Michelangelo
+bulletPoints - studied in the Humanist academy, founded by the Medicis and based on Neoplatonism - Lorenzo noticed the talent on first sight of him
+cost 700
+rep 6
+done
+choice XAA
+year 1480
+content Pietro Lombardo wants you to fund his Monument of the Doge.
+decision
+prompt Will you fund Pietro?
+leftPanel
+#XAB
+text Pietro Lombardo
+picture PietroLombardo
+bulletPoints - was the chief sculptor in many large projects
+cost 500
+rep 2
+done
+rightPanel
+#XBA
+text Don’t Patron; Use money to continue banking
+allowMoney true
+moneyEarned 220
+done
+choice XAB
+year 1486
+content The painter Sandro Botticelli wants you to commission his work The Birth of Venus.
+decision
+prompt Will you fund this commissioning?
+rightPanel
+#XAC
+text Don’t Patron; Use money to continue banking
+allowMoney true
+moneyEarned 220
+done
+leftPanel
+#XABA
+text Sandro Botticelli
+picture Sandro Botticelli
+bulletPoints - student of the Florentine School - known as the ‘linear grace of early Renaissance painting’
+cost 600
+rep 4
+done
+choice XABA
+year 1485
+content An opposing banking company lowers their interest for loans, detracting from your customers.
+decision
+prompt You drop 50 florins in profit!
+leftPanel
+#XBB
+text Continue
+allowMoney true
+moneyEarned 170
+done
+
+choice XAC
+year 1486
+content The painter Baldassare Estense wants you to fund his portrait of John Corvinus.
+decision
+prompt Will you fund him?
+rightPanel
+#XACA
+text Don’t Patron; Use money to continue banking
+allowMoney true
+moneyEarned 220
+done
+leftPanel
+#XAD
+text Baldassare Estense
+picture BaldassareEstense
+bulletPoints - pupil of Cosimo Tura, a pretty famous artist
+cost 400
+rep 1
+done
+
+choice XACA
+year 1490
+content An opposing bank business raises their interest rates, giving you a slight increase in customers.
+decision
+prompt You gain 20 florins in extra profit!
+leftPanel
+#EVENT_FINAL
+text Continue
+allowMoney true
+moneyEarned 240
+rep 1
+done
+choice XAD
+year 1490
+content A painter in Rome named Melozzo da Forli wants you to commission the piece Jesus Blessing in the Chapel of St. Helena.
+decision
+prompt Will you fund this foreigner?
+rightPanel
+#EVENT_FINAL
+text Don’t Patron; Use money to continue banking
+allowMoney true
+moneyEarned 220
+done
+leftPanel
+#EVENT_FINAL
+text Melozzo da Forli
+picture MelozzoForli
+bulletPoints - attended the Forli Painting School - uses the style of foreshortening, a relatively new style
+cost 650
+rep 1
+done
+choice YA
+year 1475
+content A sculptor named Andrea del Verrocchio wants you to give the ‘ok’ for the finishing of his David, commissioned by Pietro, your father.
+decision
+prompt Will you go back on your father’s word, or continue with the product?
+rightPanel
+#YAA
+text Don’t Patron; Use money to continue banking
+allowMoney true
+moneyEarned 220
+done
+leftPanel
+#YB
+text Andrea del Verrocchio
+picture AndreaVerrocchio
+cost 550
+bulletPoints - Is a bronze statue - is in heavy contrast to Donatello’s David, being modestly dressed instead of provocatively naked
+rep 4
+done
+
+choice YB
+year 1480
+content The next artist is Jacopo del Sellaio with his Saint John the Baptist that he wants you to commission.
+decision
+prompt Will you accept the offer?
+rightPanel
+#YBA
+text Don’t Patron; Use money to continue banking
+allowMoney true
+moneyEarned 220
+done
+leftPanel
+#YC
+text Jacopo del Sellaio
+picture JacopoSellaio
+bulletPoints - studied in the Florentine School - is the pupil of Fra Filippo Lippi
+cost 500
+rep 2
+done
+
+choice YC
+year 1485
+content The architect Giuliano da Sangallo wants you to fund his efforts for the building of the Villa Medici.
+decision
+prompt Will you fund him?
+rightPanel
+#YD
+text Don’t Patron; Use money to continue banking
+allowMoney true
+moneyEarned 220
+done
+leftPanel
+#XAC
+text Giuliano da Sangallo
+picture GiulianoSangallo
+bulletPoints - will be the symbol of the Medici family - very large and luxurious palace
+cost 750
+rep 6
+done
+choice YD
+year 1487
+content The next artist is Biagio d’Antonio who wants your financial help in creating The Betrothal of Jason and Medea.
+decision
+prompt Will you accept his proposition?
+rightPanel
+#EVENT_FINAL
+text Don’t Patron; Use money to continue banking
+allowMoney true
+moneyEarned 220
+done
+leftPanel
+#EVENT_FINAL
+text Biagio d’Antonio
+picture BiagioAntonio
+bulletPoints - shows mainly Florentinian influence - also shows some Netherlandish styles and other international influences
+cost 400
+rep 2
+done
+
+choice YBA
+year 1485
+content Another competing banking company opens up, decreasing your income slightly temporarily.
+decision
+prompt You lose 30 florins in profits!
+leftPanel
+#YBB
+text Continue
+allowMoney true
+moneyEarned 190
+done
+
+choice YBB
+year 1491
+content Andrea della Robbia wants to work on the bust of San Lino with your financial help.
+decision
+prompt Will you accept the offer?
+rightPanel
+#EVENT_FINAL
+text Don’t Patron; Use money to continue banking
+allowMoney true
+moneyEarned 220
+done
+leftPanel
+#EVENT_FINAL
+text Andrea della Robbia
+picture AndreaRobbia
+bulletPoints - worked on many famous pieces
+cost 650
+rep 3
+done
+choice YAA
+year 1480
+content Benedetto da Maiano wants to design the doorway in the Palazzo Vecchio with your financial help.
+decision
+prompt Will you accept the offer?
+rightPanel
+#YAB
+text Don’t Patron; Use money to continue banking
+allowMoney true
+moneyEarned 220
+done
+leftPanel
+#YBA
+text Benedetto da Maiano
+picture BenedettoMaiano
+bulletPoints - was pupil of Antonio Rossellino - became more famous than his mentor
+cost 550
+rep 3
+done
+choice YAB
+year 1485
+content An opposing banking business goes bankrupt, increasing your income temporarily..
+decision
+prompt Your profits increased by 80 florins!
+leftPanel
+#YAC
+text Continue
+allowMoney true
+moneyEarned 300
+done
+
+choice YAC
+year 1489
+content The sculptor Andrea della Robbia wants you to commission his Virgin and two Angels.
+decision
+prompt Will you fund him?
+rightPanel
+#EVENT_FINAL
+text Don’t Patron; Use money to continue banking
+allowMoney true
+moneyEarned 220
+done
+leftPanel
+#EVENT_FINAL
+text Andrea della Robbia
+picture AndreaRobbia
+bulletPoints - worked on many famous pieces
+cost 650
+rep 3
+done
+
+choice EVENT_FINAL
+year 1492
+content You, Lorenzo, are now on your deathbed. You have seen your previous generations of the Medici family as they propagated themselves within the Renaissance through sponsoring artists and their respective works. Now, with your choices, past and present, you have decided the future of modern society and the course it will take, only by deciding what was good enough art and what was not good enough.
+decision
+prompt What future did you choose?
+leftPanel
+#SCORE
+text Find out
+done
+
+choice SCORE
+leftPanel
+text Stats
+done
+
+choice EVENT_BANKRUPT
+content GG! You Squandered your money like a foolish peasant! Welp, looks like humanity will have to do without good art! Now we're doomed to watch cat videos forever!
+
+choice EVENT_GGREP
+content GG! You were an idiot and sponsored barely anyone! Why would you do that? Welp, looks like humanity will have to do without good art! Now we're doomed to watch cat videos forever!

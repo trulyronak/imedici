@@ -35,6 +35,12 @@ class Choice: NSObject, NSCoding {
             singleChoice = true
         }
     }
+    func isSingle() -> Bool {
+        if left == "none" {
+            singleChoice = true
+        }
+        return singleChoice
+    }
     //data management protocols
     func encodeWithCoder(coder: NSCoder) {
         coder.encodeObject(isActive, forKey: "isActive")

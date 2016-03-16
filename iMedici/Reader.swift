@@ -27,7 +27,7 @@ class Reader {
             
             while let line = reader.nextLine() {
                 var firstCha =  (line.characters.first)
-                
+                print("\(line)")
                 if let firstChar = firstCha {
                     switch firstChar {
                     case "#":
@@ -74,16 +74,16 @@ class Reader {
             
             /*
             for choice in choices.values {
-            print("")
-            print("Choice \(choice.identifier) ")
-            if choice.identifier.containsString("EVENT_") {}
-            else {
-            print("Right: \(choice.right) ")
-            print("\(choice.identifier)'s right: \(choices[choice.right!])")
-            print("Left: \(choice.left) ")
-            print("\(choice.identifier)'s left: \(choices[choice.left!])")
-            }
-            print("")
+                print("")
+                print("Choice \(choice.identifier) ")
+                if choice.identifier.containsString("EVENT_") {}
+                else {
+                    print("Right: \(choice.right) ")
+                    print("\(choice.identifier)'s right: \(choices[choice.right!])")
+                    print("Left: \(choice.left) ")
+                    print("\(choice.identifier)'s left: \(choices[choice.left!])")
+                }
+                print("")
             }
             */
             defer {
@@ -247,38 +247,40 @@ class Reader {
                 reader.close()
             }
             //MARK: Debugging Choice Content
+            
             /*
             for choice in choices.values {
-            
-            
-            print("")
-            print("Choice \(choice.identifier)")
-            print("Choice Content")
-            print(choice.content.text)
-            if choice.identifier.containsString("X"){}
-            if choice.identifier.containsString("EVENT_") {}
-            else {
-            print("Choice Decision:")
-            print(choice.decision.prompt)
-            if choice.left!.containsString("none") {}
-            else {
-            print("Left Panel")
-            print(choice.decision.leftText)
-            print(choice.decision.leftBulletPoints)
-            print(choice.decision.leftImage)
-            print(choice.decision.cost)
+                
+                
+                print("")
+                print("Choice \(choice.identifier)")
+                print("Choice Content")
+                print(choice.content.text)
+                if choice.identifier.containsString("X"){}
+                if choice.identifier.containsString("EVENT_") {}
+                else {
+                    print("Choice Decision:")
+                    print(choice.decision.prompt)
+                    if choice.left!.containsString("none") {}
+                    else {
+                        print("Left Panel")
+                        print(choice.decision.leftText)
+                        print(choice.decision.leftBulletPoints)
+                        print(choice.decision.leftImage)
+                        print(choice.decision.cost)
+                    }
+                    print("Right Panel")
+                    print(choice.decision.rightText)
+                    print(choice.decision.rightBulletPoints)
+                    print(choice.decision.rightImage)
+                    print(choice.decision.moneyEarned)
+                    print("")
+                    
+                }
+                
+                
             }
-            print("Right Panel")
-            print(choice.decision.rightText)
-            print(choice.decision.rightBulletPoints)
-            print(choice.decision.rightImage)
-            print(choice.decision.moneyEarned)
-            print("")
-            
-            }
-            
-            
-            }*/
+            */
         }
         else {
             worked = false
