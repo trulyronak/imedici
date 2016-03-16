@@ -1,4 +1,4 @@
-choice INTRO
+﻿choice INTRO
 year 1425
 content Your name is Giovanni di Bicci de Medici, the leader of the Medici family. Over time, you have restored your family’s fortune after Salvestro tarnished it, but your life is coming to an end so you need to pass on the Medici lineage. The year is 1420, and there seems to be an flourish in learning and the arts across Italy, where you live. In Florence, you want to help contribute to the apparent rebirth in Greco-Roman ideals by funding artists and becoming a patron of the arts. However, artistic ventures are rather expensive, and you need to continue your family’s banking business. Now, you decide. Spanning over 100 years, Medici will cover the High Renaissance through the perspective of the influential Medici family. You must decide which artists to sponsor and which do not. You must also make sure not to go bankrupt, as that will mean an immediate GAME OVER. Also, you must still sponsor pieces or you will lose all your reputation as a sponsor. Let the Renaissance begin!
 
@@ -1039,4 +1039,13 @@ picture AndreaRobbia
 bulletPoints - worked on many famous pieces
 cost 650
 rep 3
+done
+
+choice EVENT_FINAL
+year 1492
+content You, Lorenzo, are now on your deathbed. You have seen your previous generations of the Medici family as they propagated themselves within the Renaissance through sponsoring artists and their respective works. Now, with your choices, past and present, you have decided the future of modern society and the course it will take, only by deciding what was good enough art and what was not good enough.
+decision
+prompt What future did you choose?
+leftPanel
+text Find out
 done
