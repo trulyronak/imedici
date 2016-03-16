@@ -221,5 +221,11 @@ choice YAB
 left YAC
 
 choice YAC
-right YAD
-left YEA
+right EVENT_FINAL
+left EVENT_FINAL
+
+choice EVENT_FINAL
+left SCORE
+
+choice SCORE
+left

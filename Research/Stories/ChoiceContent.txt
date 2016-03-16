@@ -1047,5 +1047,11 @@ content You, Lorenzo, are now on your deathbed. You have seen your previous gene
 decision
 prompt What future did you choose?
 leftPanel
+#SCORE
 text Find out
+done
+
+choice SCORE
+leftPanel
+text Stats
 done
