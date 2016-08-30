@@ -10,9 +10,9 @@ We proudly attend Westview High School. This Project was done for our Honors Hum
  - <a href="http://ronakshah.net" target="_blank">Ronak Shah</a>
  - Robby Zaheer
 
-##How to start collaborating
-We're still working! (Kinda) If you feel you can contribute (add more story, fix bugs), follow the below instructions
-1. Install Github to your computer (<a href = "https://desktop.github.com/">download it here </a>) 
- -  Make a github account too, while your at it <a href = "https://github.com">over here</a>
-2. Next, after logging in with your user name and password, email me @ contact@ronakshah.net for permission to write to the directory
-3. Then click the "plus sign" at the top left and select "HH-Google-20"
+##Collaboration
+####Features We Want
+- Better UI/UX
+- Visual Aids
+- Music
+- More! (We're Open to New Ideas!
